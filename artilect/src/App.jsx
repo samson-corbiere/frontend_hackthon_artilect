@@ -1,4 +1,7 @@
 import './App.css';
+import data from "../machine.json";
+
+const machine = data.machine;
 
 function App() {
   return (
