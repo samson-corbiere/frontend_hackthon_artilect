@@ -1,7 +1,8 @@
 import React from "react";
 import styled from 'styled-components';
 
-import markbois from "./img/markbois.png";
+import markbois from "../img/markbois.png";
+import user from "../img/user1.jpeg";
 
 const Status = styled.input`
   width: 6em;
@@ -64,8 +65,8 @@ const cardSquareUser = () => {
   return (
     <WrapCard>
       <WrapImg>
-        <img src={markbois} alt={src} />
-      <Img src="https://fabcafe-manager.com/uploads/project_image/743/project_image.jpg" alt="Image Projet"/>
+        <img src={markbois} alt="markerBois" />
+      <Img src={user} alt="User"/>
       </WrapImg>
       <ProjetTitle>Nom de projet</ProjetTitle>
       <WrapItem>
