@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
 import machine from "../static/machine.json";
 import PhotoMachine from "../components/photoMachine";
+
 import "../styles/Accueil.css";
 
 function Accueil() {
@@ -13,7 +14,7 @@ function Accueil() {
   }, [])
 
   return (
-      <div>
+      <div className="background-home">
           {machineData.map(item =>
               <PhotoMachine
                   description={item.intro_sentence}
@@ -22,7 +23,7 @@ function Accueil() {
               />
           )
           }
-          <p>aaaaaaaaah</p>
+          <div>aaaaaaaaah</div>
       </div>
   )
 }

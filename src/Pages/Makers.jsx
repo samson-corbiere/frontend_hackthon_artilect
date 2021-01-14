@@ -13,23 +13,24 @@ const CardsContainer = styled.div`
 `
 
 function ProjectsList() {
-    const [projectData, setProjectData] = useState([])
+    const [userData, setUserData] = useState([])
 
     useEffect(() => {
-        setProjectData(data)
+        setUserData(data)
     }, [])
 
     return (
         <div>
             <PrincipalTitle textTitle={"Les makers"} />
             <CardsContainer>
-                {projectData.map(e =>
+                {userData.map(e =>
                     <>
                         <Link to="/profil">
                             <CardSquareUser
                                 photo_maker={e.photo}
                                 title={e.name}/>
                         </Link>
+
                     </>
                 )}
             </CardsContainer>
