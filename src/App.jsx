@@ -1,17 +1,21 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, useParams } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useParams
+} from "react-router-dom";
 import Chat from "./components/Chat";
 import BottomNavigation from "./components/BottomNavigation";
 import Accueil from "./Pages/Accueil";
 import Communaute from "./components/Communaute";
 import Direct from "./components/Direct";
 import Machine from "./components/Machine";
-import Profile from "./Pages/Profile"
+import Profile from "./Pages/Profile";
 import ProjectsList from "./Pages/ProjectsList";
 
 function App() {
-
   return (
     <Router>
       <div className="main">
@@ -23,19 +27,16 @@ function App() {
           <Route exact path="/makers" component={Communaute}></Route>
           <Route exact path="/direct" component={Direct}></Route>
           <Route exact path="/profil" component={Profile}></Route>
-          </Switch>
-          <div className="allFooter">
+        </Switch>
+        <div className="allFooter">
           <div className="navigationFooter">
-              <BottomNavigation />
-            </div>
-            <div className="chatPlace">
-              <Chat />
-            </div>
+            <BottomNavigation />
           </div>
+          <div className="chatPlace"></div>
         </div>
-      </Router>
-  )
+      </div>
+    </Router>
+  );
 }
-
 
 export default App;

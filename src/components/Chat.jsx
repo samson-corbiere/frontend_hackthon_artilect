@@ -45,19 +45,40 @@ class Chat extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      opened: false
+      opened: false,
+      botId: this.props.botId
     };
   }
 
+  componentDidMount(){
+    console.log("CHAT CDM this.props.opened => " +this.props.opened)    
+  }
+
   toggleFloating = ({ opened }) => {
-    this.setState({ opened });
+    this.setState({ opened  });
+    console.log("CHAT toggleFloating opened => " +opened)
   };
 
   render() {
     const { opened } = this.state;
 
+    if (this.props.opened === true && opened === false) {
+      this.setState({opened : true})
+      // this.state.opened = this.props.opened
+      console.log("CHAT render in if")
+    }
+
+    console.log("CHAT render this.state.opened ==> " +this.state.opened)
+
+    // const { value } = this.props.test;
+    // console.log('value ==> ' +value)
+    /* 
+    opened={opened}
+          toggleFloating={this.toggleFloating}
+    */
     return (
       <div className="application">
+        {console.log("CHAT return this.props.opened => " +this.props.opened)}
         <ChatBot
           // mute possible par le user
           //   headerTitle="Speech Synthesis"
