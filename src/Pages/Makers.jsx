@@ -20,7 +20,7 @@ function ProjectsList() {
 
     return (
         <div>
-            <PrincipalTitle textTitle={"Les projets"} />
+            <PrincipalTitle textTitle={"Les makers"} />
             <CardsContainer>
                 {projectData.map(e =>
                     <>
