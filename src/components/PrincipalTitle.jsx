@@ -18,7 +18,6 @@ function PrincipalTitle({textTitle}) {
     font-weight: bold;
     font-size: 28px;
     line-height: 33px;
-
     color: #659DB8;
   `;
   return (

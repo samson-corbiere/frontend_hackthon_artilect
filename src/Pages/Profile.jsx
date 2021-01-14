@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import userdata from "../static/user.json";
-import PhotoMaker from "../components/PhotoMaker"
+import PhotoMaker from "../components/PhotoMaker";
+import PrincipalButton from "../components/PrincipalButton";
+import '../styles/Profile.css';
 
 function Profile() {
 
@@ -12,17 +14,28 @@ function Profile() {
     }, [])
 
     return (
-        <div>
+        <div style={{margin:"auto"}}>
             {profileData.map(item =>
-                <PhotoMaker
-                    user_name={item.name}
-                    photo={item.photo}
-                    personality_name={item.personality.name}
-                    personality_url={item.personality.url}
-                />
-            )
-            }
+                <div className="container">
+                    <input type="button" value="Edit" className="button-edit"/>
+                    <PhotoMaker
+                        user_name={item.name}
+                        photo={item.photo}
+                        personality_name={item.personality.name}
+                        personality_url={item.personality.url}
+                    />
+                    <h2 className="name">{item.name}</h2>
+                    <div className="container-competence">
+                        {item.competence.map(comp =>
+                            <p className="competence">{comp.name}</p>
+                        )}
+                    </div>
+                    <PrincipalButton textButton="Contacter sur Discord"/>
+                    <PrincipalButton textButton="Envoyer un e-mail"/>
+                </div>
+            )}
         </div>
+
     )
 }
 
