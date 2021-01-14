@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, useParams } from "react-router-
 import Chat from "./components/Chat";
 import BottomNavigation from "./components/BottomNavigation";
 import Accueil from "./Pages/Accueil";
-import Communaute from "./components/Communaute";
+import Makers from "./Pages/Makers";
 import Direct from "./components/Direct";
 import Machine from "./components/Machine";
 import Profile from "./Pages/Profile"
@@ -22,7 +22,7 @@ function App() {
           <Route exact path="/accueil" component={Accueil}></Route>
           <Route exact path="/machine/:id" component={Machine}></Route>
           <Route exact path="/projets" component={ProjectsList}></Route>
-          <Route exact path="/makers" component={Communaute}></Route>
+          <Route exact path="/makers" component={Makers}></Route>
           <Route exact path="/direct" component={Direct}></Route>
           <Route exact path="/profil" component={Profile}></Route>
           </Switch>
