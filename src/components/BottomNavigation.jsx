@@ -12,7 +12,7 @@ class BottomNavigation extends React.Component {
     return (
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <div>
-          <NavLink to="/machines">
+          <NavLink to={`/`}>
             <img src={machineImg} alt="" />
           </NavLink>
         </div>
@@ -22,7 +22,7 @@ class BottomNavigation extends React.Component {
           </NavLink>
         </div>
         <div>
-          <NavLink to="/communaute">
+          <NavLink to="/makers">
             <img src={communauteImg} alt="" />
           </NavLink>
         </div>

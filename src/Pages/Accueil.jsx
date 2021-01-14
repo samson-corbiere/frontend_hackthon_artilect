@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
-import "./Accueil.css";
 import machine from "../static/machine.json"
 import PhotoMachine from "./photoMachine"
+import "../styles/Accueil.css";
 
 function Accueil() {
 

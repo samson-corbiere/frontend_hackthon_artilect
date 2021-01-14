@@ -44,29 +44,29 @@
             {
             "id": 2,
             "name": "Bois"
-            }
-          ],
-          "competence" : [
-            {
-              "name": "Mécanique",
-              "level": "1",
-              "reward":"42"
-            },
-            {
-              "name": "Électronique",
-              "level": "2",
-              "reward":"190"
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "name": "Ethel Wells",
-          "photo": "https://randomuser.me/api/portraits/women/69.jpg",
-          "email": "wells.e@gmail.com",
-          "link_discord": "https://discord.com/",
-          "personality" : [
-            {
+          }
+        ],
+        "competence": [
+          {
+            "name": "Mécanique",
+            "level": "1",
+            "reward": "42"
+          },
+          {
+            "name": "Électronique",
+            "level": "2",
+            "reward": "190"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Ethel Wells",
+        "photo": "https://randomuser.me/api/portraits/women/69.jpg",
+        "email": "wells.e@gmail.com",
+        "link_discord": "https://discord.com/",
+        "personality": [
+          {
             "id": 3,
             "name": "Acier"
             }
@@ -118,27 +118,26 @@
             {
             "id": 2,
             "name": "Bois"
-            }
-          ],
-          "competence" : [
-            {
-              "name": "Mécanique",
-              "level": "2",
-              "reward":"122"
-            },
-            {
-              "name": "Électronique",
-              "level": "2",
-              "reward":"190"
-            },
-            {
-              "name": "Programation",
-              "level": "1",
-              "reward":"22"
-            }
-          ]
-        }
-      ]
-    }
-  ]
-  
+          }
+        ],
+        "competence": [
+          {
+            "name": "Mécanique",
+            "level": "2",
+            "reward": "122"
+          },
+          {
+            "name": "Électronique",
+            "level": "2",
+            "reward": "190"
+          },
+          {
+            "name": "Programation",
+            "level": "1",
+            "reward": "22"
+          }
+        ]
+      }
+    ]
+  }
+]

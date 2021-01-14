@@ -1,6 +1,7 @@
 import React from "react";
 import styled from 'styled-components'
 
+
 const Status = styled.input`
   width: 6em;
   height: 1.4em;
@@ -14,22 +15,23 @@ const Status = styled.input`
 `
 
 const WrapCard = styled.div`
-  width: 7em;
-  height: 8em;
+  width: 13em;
+  height: 14em;
   margin: auto;
   background: #FFFFFF;
   box-shadow: 0px 4px 19px -2px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 25px;
+  text-align: center;
+ 
 `
 const WrapItem = styled.div`
   margin: auto;
   background: #FFFFFF;
   border-radius: 10px;
   display: flex;
-  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 `
 const Img = styled.img`
   position: absolute;
@@ -54,22 +56,24 @@ const ProjetTitle = styled.h2`
 const WrapImg = styled.div`
   position: relative;
   overflow: hidden;
-  width: 7em;
-  height: 4em;
+  width: 13em;
+  height: 9em;
 `
 
-const cardSquare = () => {
+const cardSquare = ({ image_project, title, status, photo_machine, name_machine }) => {
   return (
-    <WrapCard>
-      <WrapImg>
-      <Img src="https://fabcafe-manager.com/uploads/project_image/743/project_image.jpg" alt="Image Projet"/>
-      </WrapImg>
-      <ProjetTitle>Nom de projet</ProjetTitle>
-      <WrapItem>
-        <Status type="button" value="en cours"/>
-        <Machine src="https://artilect.fr/wp-content/uploads/doliconnect/product/183/LASER-SP100-Plan%20de%20travail%2080-200x200.png" alt="Machine"/>
-      </WrapItem>
-    </WrapCard>
+    <div>
+      <WrapCard>
+        <WrapImg>
+          <Img src={image_project} alt="Image Projet" />
+        </WrapImg>
+        <ProjetTitle>{title}</ProjetTitle>
+        <WrapItem>
+          <Status type="button" value={status} />
+          <Machine src={photo_machine} alt={name_machine} />
+        </WrapItem>
+      </WrapCard>
+    </div>
   );
 };
 
