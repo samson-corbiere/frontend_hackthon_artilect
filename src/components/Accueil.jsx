@@ -1,21 +1,30 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
 import "./Accueil.css";
+import machine from "../static/machine.json"
+import PhotoMachine from "./photoMachine"
 
-class Accueil extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+function Accueil() {
 
-  render() {
-    return (
-      <Router>
-        <div className="main">
-          <p>je suis la page d'accueil</p>
-        </div>
-      </Router>
-    );
-  }
+  const [machineData, setMachine] = useState([])
+
+  useEffect(() => {
+      setMachine(machine)
+  }, [])
+
+  return (
+      <div>
+          {machineData.map(item =>
+              <PhotoMachine
+                  description={item.intro_sentence}
+                  photo={item.url_photo}
+                  name={item.user_name}
+              />
+          )
+          }
+          <p>aaaaaaaaah</p>
+      </div>
+  )
 }
 
 export default Accueil;
