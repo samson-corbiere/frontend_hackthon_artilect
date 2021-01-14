@@ -22,7 +22,7 @@ class App extends React.Component {
             <Route exact path="/Direct" component={Direct}></Route>
           </Switch>
           <div className="allFooter">
-          <div className="navigationFooter">
+            <div className="navigationFooter">
               <BottomNavigation />
             </div>
             <div className="chatPlace">
