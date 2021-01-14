@@ -13,6 +13,9 @@ import Projects from "./components/Projects";
 import Communaute from "./components/Communaute";
 import Machine from "./components/Machine";
 import Direct from "./components/Direct";
+import Machine from "./components/Machine";
+import CardSquare from "./components/CardSquare";
+import Profile from "./components/Profile"
 
 class App extends React.Component {
   constructor(props) {
@@ -26,6 +29,9 @@ class App extends React.Component {
           {/* <p>je suis la page d'accueil</p> */}
           <Chat />
           <main>
+            <Machine />
+            <CardSquare />
+            <Profile />
             {" "}
             {/* accueil machine projets communauté  direct */}
             <Switch>
@@ -42,6 +48,12 @@ class App extends React.Component {
           {/* <footer>A&F Développement</footer> */}
         </div>
       </Router>
+      <div className="application">
+        <Chat/>
+        <Machine />
+        <CardSquare />
+        <Profile />
+      </div>
     );
   }
 }
