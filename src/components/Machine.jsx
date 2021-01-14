@@ -1,52 +1,25 @@
 import React, { useState, useEffect } from "react";
-import json from "../static/machine";
-
-import PrincipalButton from "./PrincipalButton";
+import machineDataJson from "../static/machine.json";
+import PhotoMaker from "../components/PhotoMaker";
 
 function Machine() {
-  const [data, setData] = useState(null);
+  const [machineData, setProfile] = useState([]);
 
-  const getData=()=>{
-    fetch('data.json'
-    ,{
-      headers : { 
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-       }
-    }
-    )
-      .then(function(response){
-        console.log("response ==> " +response)
-        return response.json();
-      })
-      .then(function(myJson) {
-        console.log(myJson);
-      });
-  }
-  useEffect(()=>{
-    getData()
-  },[])
+  useEffect(() => {
+    const machine = machineDataJson;
+    setProfile(machine);
+  }, []);
 
-  return "hello"
-  // const [data, setData] = useState(null);
-
-  // const retrieveMachineData = async () => {
-  //   let res = await fetch(json);
-  //   console.log("res ==> " +res)
-  //   let response = await res.json();
-  //     setData(response.disclaimer);
-  // };
-
-  // return (
-  //   <div>
-  //     {/* nom / image / description / commnent mutiliser / mes makers / mes realisations  */}
-  //     <div>
-  //       <p></p>
-  //     </div>
-  //     <PrincipalButton textButton="salut" />
-  //     <PrincipalButton textButton="modifie moi stp" />
-  //   </div>
-  // );
+  return (
+    <div>
+      {machineData.map(item => (
+        <PhotoMaker
+          user_name={item.name}
+          photo={item.url_photo}
+        />
+      ))}
+    </div>
+  );
 }
 
 export default Machine;
