@@ -1,5 +1,6 @@
 import React from "react";
-import styled from 'styled-components'
+import styled from 'styled-components';
+import projectdata from "../static/projet.json";
 
 
 const Status = styled.input`
@@ -60,21 +61,23 @@ const WrapImg = styled.div`
   height: 9em;
 `
 
-const cardSquare = ({ image_project, title, status, photo_machine, name_machine }) => {
+const CardSquare = ({ image_project, title, status, photo_machine, name_machine }) => {
   return (
     <div>
+      {projectdata.map(item =>
       <WrapCard>
         <WrapImg>
-          <Img src={image_project} alt="Image Projet" />
+          <Img src={item.photo_link} alt="Image Projet" />
         </WrapImg>
-        <ProjetTitle>{title}</ProjetTitle>
+        <ProjetTitle>{item.name}</ProjetTitle>
         <WrapItem>
-          <Status type="button" value={status} />
-          <Machine src={photo_machine} alt={name_machine} />
+          <Status type="button" value={item.status} />
+          <Machine src={item.photo_machine} alt={item.name_machine} />
         </WrapItem>
       </WrapCard>
+       )}
     </div>
   );
 };
 
-export default cardSquare;
+export default CardSquare;

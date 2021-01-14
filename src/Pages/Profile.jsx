@@ -3,6 +3,7 @@ import userdata from "../static/user.json";
 import PhotoMaker from "../components/PhotoMaker";
 import PrincipalButton from "../components/PrincipalButton";
 import '../styles/Profile.css';
+import CardSquare from "../components/CardSquare";
 
 function Profile() {
 
@@ -30,6 +31,7 @@ function Profile() {
                             <p className="competence">{comp.name}</p>
                         )}
                     </div>
+                    <CardSquare />
                     <PrincipalButton textButton="Contacter sur Discord"/>
                     <PrincipalButton textButton="Envoyer un e-mail"/>
                 </div>
