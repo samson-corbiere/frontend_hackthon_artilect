@@ -14,21 +14,6 @@ class App extends React.Component {
     return (
       <Router>
         <div className="main">
-          <div style={{ flex: 1 }}>
-            <div style={{ flex: 3 }}>
-              <Chat />
-            </div>
-            <div
-              style={{
-                position: "absolute",
-                bottom: "32px",
-                paddingLeft : "16px",
-                flex: 7
-              }}
-            >
-              <BottomNavigation />
-            </div>
-          </div>
           <Switch>
             <Route exact path="/Accueil" component={Accueil}></Route>
             <Route exact path="/Machines" component={Machine}></Route>
@@ -36,6 +21,14 @@ class App extends React.Component {
             <Route exact path="/Communaute" component={Communaute}></Route>
             <Route exact path="/Direct" component={Direct}></Route>
           </Switch>
+          <div className="allFooter">
+          <div className="navigationFooter">
+              <BottomNavigation />
+            </div>
+            <div className="chatPlace">
+              <Chat />
+            </div>
+          </div>
         </div>
       </Router>
     );
