@@ -5,7 +5,11 @@
   "photo": "https://randomuser.me/api/portraits/men/40.jpg",
   "email": "john.doe@gmail.com",
   "link_discord": "https://discord.com/",
-  "personality" : "Bois",
+  "personality" : {
+    "id": 1,
+    "url": "url",
+    "name": "gentil"
+  },
   "competence" : [
     {
       "name": "Mécanique",
