@@ -29,6 +29,7 @@ const WrapMachine = styled.div`
   align-items: center;
 `
 const WrapLevel = styled.div`
+  width: 2em;
 `
 
 const WrapCompetence = styled.div`
