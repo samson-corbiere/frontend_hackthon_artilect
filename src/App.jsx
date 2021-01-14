@@ -15,9 +15,10 @@ function App() {
   return (
     <Router>
       <div className="main">
-        <Chat />
         <Switch>
-          <Route exact path="/" component={Accueil}></Route>
+          <Route exact path="/"> 
+            <Accueil />
+          </Route>
           <Route exact path="/machine/:id" component={Machine}></Route>
           <Route exact path="/projets" component={ProjectsList}></Route>
           <Route exact path="/makers" component={Makers}></Route>

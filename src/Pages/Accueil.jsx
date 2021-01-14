@@ -1,31 +1,48 @@
-import React, {useEffect, useState} from "react";
-import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
-import machine from "../static/machine.json";
-import PhotoMachine from "../components/photoMachine";
 
+import React, {Component} from "react";
+//import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
+//import machine from "../static/machine.json"
+import PhotoMachine from "../components/PhotoMachine"
 import "../styles/Accueil.css";
+import axios from "axios";
 
-function Accueil() {
 
-  const [machineData, setMachine] = useState([])
+class Accueil extends Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        machineData: [],
+      };
+    }
 
-  useEffect(() => {
-      setMachine(machine)
-  }, [])
+    getMachine() {
+      console.log("coucou")
+      const url = "http://localhost:5000/api/machines";
+      axios.get(url)
+      .then((response) => response.data)
+      .then((machineArray) => this.setState({machineData : machineArray}))
+    }
 
-  return (
-      <div className="background-home">
-          {machineData.map(item =>
-              <PhotoMachine
-                  description={item.intro_sentence}
+    componentDidMount() {
+        this.getMachine() 
+    }
+
+      render(){
+        const { machineData } = this.state;
+        return (
+        <div className="background-home">
+            {machineData.map(item =>
+                <PhotoMachine
+                  intro={item.intro_sentence}
                   photo={item.url_photo}
                   name={item.user_name}
-              />
+                />
           )
           }
-          <div>aaaaaaaaah</div>
-      </div>
-  )
+        </div>
+        );
+      }
 }
 
 export default Accueil;
+
