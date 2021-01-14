@@ -1,45 +1,55 @@
-import React, {Component, useEffect, useState} from "react";
-import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
-import machine from "../static/machine.json"
-import PhotoMachine from "../components/PhotoMachine"
+import React, { Component, useEffect, useState } from "react";
+import {
+  BrowserRouter as Router,
+  NavLink,
+  Route,
+  Link
+} from "react-router-dom";
+import machine from "../static/machine.json";
+import PhotoMachine from "../components/PhotoMachine";
 import "../styles/Accueil.css";
 import axios from "axios";
+import Project from "./Project.jsx";
 
 class Accueil extends Component {
-    constructor(props) {
-      super(props);
-      this.state = {
-        machineData: [],
-      };
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      machineData: [],
+      machineId: 0
+    };
+  }
 
-    getMachine() {
-      console.log("coucou")
-      const url = "http://localhost:5000/api/machines";
-      axios.get(url)
-      .then((response) => response.data)
-      .then((machineArray) => this.setState({machineData : machineArray}))
-    }
+  getMachine() {
+    console.log("coucou");
+    const url = "http://localhost:5000/api/machines";
+    axios
+      .get(url)
+      .then(response => response.data)
+      .then(machineArray => this.setState({ machineData: machineArray }));
+  }
 
-    componentDidMount() {
-        this.getMachine() 
-    }
+  componentDidMount() {
+    this.getMachine();
+  }
 
-      render(){
-        const { machineData } = this.state;
-        return (
-        <div className="background-home">
-            {machineData.map(item =>
-                <PhotoMachine
-                  intro={item.intro_sentence}
-                  photo={item.url_photo}
-                  name={item.user_name}
-                />
-          )
-          }
-        </div>
-        );
-      }
+  render() {
+    const { machineData } = this.state;
+    return (
+      <div className="background-home">
+        {machineData.map((item, index) => (
+          <div>
+            <PhotoMachine
+              intro={item.intro_sentence}
+              photo={item.url_photo}
+              name={item.user_name}
+              id={item.id}
+            />
+          </div>
+        ))}
+      </div>
+    );
+  }
 }
 
 export default Accueil;
