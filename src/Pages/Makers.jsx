@@ -25,10 +25,10 @@ function ProjectsList() {
             <CardsContainer>
                 {userData.map(e =>
                     <>
-                        <Link to="/profil">
+                        <Link to={`/profil/${e.id}`}>
                             <CardSquareUser
                                 photo_maker={e.photo}
-                                title={e.name}/>
+                                title={e.name} />
                         </Link>
 
                     </>

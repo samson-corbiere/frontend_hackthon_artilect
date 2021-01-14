@@ -22,7 +22,7 @@ function App() {
           <Route exact path="/projets" component={ProjectsList}></Route>
           <Route exact path="/makers" component={Makers}></Route>
           <Route exact path="/direct" component={Direct}></Route>
-          <Route exact path="/profil" component={Profile}></Route>
+          <Route exact path="/profil/:id" component={Profile}></Route>
           </Switch>
           <div className="allFooter">
             <div className="navigationFooter">

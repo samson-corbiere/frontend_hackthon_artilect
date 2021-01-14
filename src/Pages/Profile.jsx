@@ -4,21 +4,24 @@ import PhotoMaker from "../components/PhotoMaker";
 import PrincipalButton from "../components/PrincipalButton";
 import '../styles/Profile.css';
 import CardSquare from "../components/CardSquare";
+import { useParams } from "react-router-dom";
 
 function Profile() {
+
+    const {id} = useParams()
 
     const [profileData, setProfile] = useState([])
 
     useEffect(() => {
-        const user = userdata
-        setProfile(user)
+        setProfile(userdata)
     }, [])
 
     return (
-        <div style={{margin:"auto"}}>
+        <div style={{ margin: "auto" }}>
             {profileData.map(item =>
+                item.id == id ? 
                 <div className="container">
-                    <input type="button" value="Edit" className="button-edit"/>
+                    <input type="button" value="Edit" className="button-edit" />
                     <PhotoMaker
                         user_name={item.name}
                         photo={item.photo}
@@ -31,11 +34,18 @@ function Profile() {
                             <p className="competence">{comp.name}</p>
                         )}
                     </div>
+                    <h2>
+                        Mes Projets
+                    </h2>
                     <CardSquare />
-                    <PrincipalButton textButton="Contacter sur Discord"/>
-                    <PrincipalButton textButton="Envoyer un e-mail"/>
+                    <PrincipalButton textButton="Contacter sur Discord" />
+                    <PrincipalButton textButton="Envoyer un e-mail" />
+                </div>
+                :
+                <div> 
                 </div>
             )}
+
         </div>
 
     )
