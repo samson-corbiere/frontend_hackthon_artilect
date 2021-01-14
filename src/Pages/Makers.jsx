@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import CardSquare from '../components/CardSquare';
+import CardSquareUser from '../components/CardSquareUser';
+import { Link } from "react-router-dom";
 import PrincipalTitle from '../components/PrincipalTitle';
-import data from "../static/projet.json";
+import data from "../static/user.json";
 import styled from 'styled-components';
 
 const CardsContainer = styled.div`
@@ -24,12 +25,11 @@ function ProjectsList() {
             <CardsContainer>
                 {projectData.map(e =>
                     <>
-                        <CardSquare
-                            image_project={e.photo_link}
-                            title={e.name}
-                            status={e.status}
-                            photo_machine={e.machine.map(item => item.url_photo)}
-                            name_machine={e.machine.map(item => item.pseudo)} />
+                        <Link to="/profil">
+                            <CardSquareUser
+                                photo_maker={e.photo}
+                                title={e.name}/>
+                        </Link>
                     </>
                 )}
             </CardsContainer>
