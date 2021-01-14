@@ -19,7 +19,7 @@ function App() {
       <div className="main">
         <Chat />
         <Switch>
-          <Route exact path="/accueil" component={Accueil}></Route>
+          <Route exact path="/" component={Accueil}></Route>
           <Route exact path="/machine/:id" component={Machine}></Route>
           <Route exact path="/projets" component={ProjectsList}></Route>
           <Route exact path="/makers" component={Makers}></Route>

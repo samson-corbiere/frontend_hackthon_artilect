@@ -1,26 +1,28 @@
 import React, { useEffect, useState } from 'react';
 import CardSquare from '../components/CardSquare';
 import PrincipalTitle from '../components/PrincipalTitle';
-import data from "../static/user.json";
+import data from "../static/projet.json";
 import styled from 'styled-components';
 
 const CardsContainer = styled.div`
-    display: flex;
-    justify-content: space-around
+   display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: space-around
 `
 
 function ProjectsList() {
-    const [userData, setUserData] = useState([])
+    const [projectData, setProjectData] = useState([])
 
     useEffect(() => {
-        setUserData(data)
+        setProjectData(data)
     }, [])
 
     return (
         <div>
             <PrincipalTitle textTitle={"Les makers"} />
             <CardsContainer>
-                {userData.map(e =>
+                {projectData.map(e =>
                     <>
                         <CardSquare
                             image_project={e.photo_link}
