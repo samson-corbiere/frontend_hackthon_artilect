@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import CardSquare from '../components/CardSquare';
+import CardSquareUser from '../components/CardSquareUser';
 import PrincipalTitle from '../components/PrincipalTitle';
-import data from "../static/projet.json";
+import data from "../static/user.json";
 import styled from 'styled-components';
 
 const CardsContainer = styled.div`
@@ -12,23 +12,22 @@ const CardsContainer = styled.div`
 `
 
 function ProjectsList() {
-    const [projectData, setProjectData] = useState([])
+    const [userData, setUserData] = useState([])
 
     useEffect(() => {
-        setProjectData(data)
+        setUserData(data)
     }, [])
 
     return (
         <div>
             <PrincipalTitle textTitle={"Les makers"} />
             <CardsContainer>
-                {projectData.map(e =>
+                {userData.map(e =>
                     <>
-                        <CardSquare
-                            image_project={e.photo_link}
-                            title={e.name}
-                            status={e.status}
-                            photo_machine={e.machine.map(item => item.url_photo)}
+                        <CardSquareUser
+                            photo_user={e.photo}
+                            name={e.name}
+                            machine={e.machine.map(item => item.url_photo)}
                             name_machine={e.machine.map(item => item.pseudo)} />
                     </>
                 )}
