@@ -25,7 +25,7 @@ function App() {
           <Route exact path="/profil" component={Profile}></Route>
           </Switch>
           <div className="allFooter">
-          <div className="navigationFooter">
+            <div className="navigationFooter">
               <BottomNavigation />
             </div>
             <div className="chatPlace">
