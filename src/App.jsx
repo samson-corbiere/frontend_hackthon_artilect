@@ -20,6 +20,7 @@ class App extends React.Component {
           <Chat />
           <Machine />
           <CardSquare />
+          <CardUser />
           <Profile />
           <PhotoMaker />
           <Switch>
