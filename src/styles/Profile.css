@@ -1,0 +1,43 @@
+.name { font-family: Roboto;
+font-weight: 300;
+font-size: 20px;
+line-height: 21px;
+display: flex;
+align-items: center;
+text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-competence {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+.competence{
+  margin: 10% 2%;
+}
+
+.button-edit{
+  position: absolute;
+  top: 10%;
+  left: 90%;
+  width: 55px;
+  height: 20px;
+  background: #FFFFFF;
+  border: 1px solid #659DB8;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 11px;
+  color: #659DB8;
+}

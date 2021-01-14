@@ -1,55 +1,55 @@
 [
   {
-  "id": 1,
-  "name": "John DOE",
-  "photo": "https://randomuser.me/api/portraits/men/40.jpg",
-  "email": "john.doe@gmail.com",
-  "link_discord": "https://discord.com/",
-
-  "personality" : {
     "id": 1,
-    "url": "https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg",
-    "name": "gentil"
-  },
-  "competence" : [
-    {
-      "name": "Mécanique",
-      "level": "1",
-      "reward":"42"
+    "name": "John DOE",
+    "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+    "email": "john.doe@gmail.com",
+    "link_discord": "https://discord.com/",
+
+    "personality": {
+      "id": 1,
+      "url": "https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg",
+      "name": "gentil"
     },
-    {
-      "name": "Électronique",
-      "level": "2",
-      "reward":"190"
-    }
-  ],
-  "machine": [
-    {
-      "id":"1",
-      "name":"laser (SP500)",
-      "pseudo":"Norbert",
-      "url_photo":"https://artilect.fr/wp-content/uploads/doliconnect/product/8/LASER-SP500-Plan%20de%20travail%2079-200x200.png"
-    }
-  ],
-  "projet":[
-    {
-      "id":1,
-      "name":"Panneaux Signalétique",
-      "status":"Terminé",
-      "description":"Création et réalisation de panneaux pour la signalétique intérieur et extérieur",
-      "discord_link":"https://discord.gg/yxPdTm72",
-      "photo_link":"https://artifab.cmar-paca.fr/uploads/project_image/124/project_image.jpg"
-    },
-    {
-      "id":1,
-    "name":"Panneaux Signalétique",
-    "status":"Terminé",
-    "description":"Création et réalisation de panneaux pour la signalétique intérieur et extérieur",
-    "discord_link":"https://discord.gg/yxPdTm72",
-    
-    "photo_link":"https://artifab.cmar-paca.fr/uploads/project_image/124/project_image.jpg"
-    }
-  ]
+    "competence": [
+      {
+        "name": "Mécanique",
+        "level": "1",
+        "reward": "42"
+      },
+      {
+        "name": "Électronique",
+        "level": "2",
+        "reward": "190"
+      }
+    ],
+    "machine": [
+      {
+        "id": "1",
+        "name": "laser (SP500)",
+        "pseudo": "Norbert",
+        "url_photo": "https://artilect.fr/wp-content/uploads/doliconnect/product/8/LASER-SP500-Plan%20de%20travail%2079-200x200.png"
+      }
+    ],
+    "projet": [
+      {
+        "id": 1,
+        "name": "Panneaux Signalétique",
+        "status": "Terminé",
+        "description": "Création et réalisation de panneaux pour la signalétique intérieur et extérieur",
+        "discord_link": "https://discord.gg/yxPdTm72",
+        "photo_link": "https://artifab.cmar-paca.fr/uploads/project_image/124/project_image.jpg"
+      },
+      {
+        "id": 1,
+        "name": "Panneaux Signalétique",
+        "status": "Terminé",
+        "description": "Création et réalisation de panneaux pour la signalétique intérieur et extérieur",
+        "discord_link": "https://discord.gg/yxPdTm72",
+
+        "photo_link": "https://artifab.cmar-paca.fr/uploads/project_image/124/project_image.jpg"
+      }
+    ]
   },
   {
     "id": 2,
@@ -57,40 +57,40 @@
     "photo": "https://randomuser.me/api/portraits/women/47.jpg",
     "email": "st.mail@gmail.com",
     "link_discord": "https://discord.com/",
-    "personality" : "Acier",
-    "competence" : [
+    "personality": "Acier",
+    "competence": [
       {
         "name": "Mécanique",
         "level": "2",
-        "reward":"122"
+        "reward": "122"
       },
       {
         "name": "Électronique",
         "level": "2",
-        "reward":"190"
+        "reward": "190"
       },
       {
         "name": "Programation",
         "level": "1",
-        "reward":"22"
+        "reward": "22"
       }
     ],
     "machine": [
       {
-        "id":"1",
-        "name":"laser (SP500)",
-        "pseudo":"Norbert",
-        "url_photo":"https://artilect.fr/wp-content/uploads/doliconnect/product/8/LASER-SP500-Plan%20de%20travail%2079-200x200.png"
+        "id": "1",
+        "name": "laser (SP500)",
+        "pseudo": "Norbert",
+        "url_photo": "https://artilect.fr/wp-content/uploads/doliconnect/product/8/LASER-SP500-Plan%20de%20travail%2079-200x200.png"
       }
     ],
     "projet": [
       {
-        "id":3,
-        "name":"Tampons blagues de scientifiques",
-        "status":"Bloqué",
-        "description":"Qui n'a jamais rêvé d’égayer des réunions de financement de plans de recherche ou des signature de projets européens avec une petites touches fantasques et burlesque pour les administrateurs qui devront éplucher ces documents lors des audit et demandes de remontée de fonds ? Voici la réponse : les  meilleures blagues de de Stephen Hawkins en tampon, humour et joie dans vos soirées CSTI ou au labo !",
-        "discord_link":"https://discord.gg/mV9Rhukv",
-        "photo_link":"https://fablab.ledome.info/uploads/project_image/2483/project_image.jpg"
+        "id": 3,
+        "name": "Tampons blagues de scientifiques",
+        "status": "Bloqué",
+        "description": "Qui n'a jamais rêvé d’égayer des réunions de financement de plans de recherche ou des signature de projets européens avec une petites touches fantasques et burlesque pour les administrateurs qui devront éplucher ces documents lors des audit et demandes de remontée de fonds ? Voici la réponse : les  meilleures blagues de de Stephen Hawkins en tampon, humour et joie dans vos soirées CSTI ou au labo !",
+        "discord_link": "https://discord.gg/mV9Rhukv",
+        "photo_link": "https://fablab.ledome.info/uploads/project_image/2483/project_image.jpg"
       }
     ]
   }

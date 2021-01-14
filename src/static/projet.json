@@ -8,12 +8,6 @@
     "photo_link":"https://artifab.cmar-paca.fr/uploads/project_image/124/project_image.jpg",
     "machine" : [
       {
-        "id":"1",
-        "name":"laser (SP500)",
-        "pseudo":"Norbert",
-        "url_photo":"https://artilect.fr/wp-content/uploads/doliconnect/product/8/LASER-SP500-Plan%20de%20travail%2079-200x200.png"
-      },
-      {
         "id":"2",
         "name":"laser (SP100)",
         "pseudo":"Robert",
