@@ -10,7 +10,7 @@ class App extends React.Component {
       <Router>
         <div>
           <Switch>
-            <Route exact path="/" component={Chat} />
+            <Route path="/" component={Chat} />
           </Switch>
         </div>
       </Router>

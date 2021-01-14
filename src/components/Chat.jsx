@@ -1,9 +1,11 @@
 import React from "react";
 import ChatBot from "react-simple-chatbot";
+import { Link } from "react-router-dom";
 import OpenLink from "../OpenLink";
+import "../notice/laser-SP100-notice.pdf";
 
 const competenceLinkAlbert = `https://www.google.fr/Albert`;
-const utiliserAlbert = `https://www.facebook.fr/Albert`;
+const utiliserAlbert = 'frontend_hackthon_artilect/src/notice/laser-SP100-notice.pdf';
 const quiUtiliseAlbert = `https://www.instagram.fr/Albert`;
 const realisationsAlbert = `https://www.myspace.fr/Albert`;
 const infosAlbert = `https://www.youtube.fr/Albert`;
@@ -64,7 +66,7 @@ class Chat extends React.Component {
             {
               id: "1",
               message:
-                "Salut à toi amis makers ! Avec quelle super machine veux tu communiquer ?",
+                "Salut à toi, ami makers ! Avec quelle super machine veux-tu communiquer ?",
               trigger: "2"
             },
             {
@@ -80,7 +82,7 @@ class Chat extends React.Component {
             {
               id: "4",
               message:
-                "Je suis Albert LASER-SP100, la plus laser de toutes les imprimantes laser. Maintenant que nous sommes amis, voici comment mieux me connaitre : ",
+                "Je suis Albert LASER-SP100, la (presque) plus laser de toutes les imprimantes laser. Maintenant que nous sommes amis, voici comment mieux me connaître : ",
               trigger: "40"
             },
             {
@@ -88,7 +90,7 @@ class Chat extends React.Component {
               options: [
                 {
                   value: 1,
-                  label: "Connaitre mes compétences",
+                  label: "Connaître mes compétences",
                   trigger: "411"
                 },
                 {
@@ -99,7 +101,7 @@ class Chat extends React.Component {
                 { value: 3, label: "Savoir qui m'utilise", trigger: "413" },
                 {
                   value: 4,
-                  label: "Les projets réalisés grace à moi :) ",
+                  label: "Les projets réalisés grâce à moi :) ",
                   trigger: "414"
                 },
                 {
@@ -121,7 +123,7 @@ class Chat extends React.Component {
             {
               id: "412",
               asMessage: true,
-              component: <OpenLink link={utiliserAlbert} />,
+              component: <Link to="/machine"> <OpenLink link={utiliserAlbert} /> </Link>,
               metadata: {
                 text: voiciCommentMutiliser
               },
