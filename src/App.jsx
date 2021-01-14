@@ -1,18 +1,19 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Chat from "./components/Chat";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
-      <div className="application">
-        <Chat/>
-      </div>
+      <Router>
+        <div>
+          <Switch>
+            <Route exact path="/" component={Chat} />
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }

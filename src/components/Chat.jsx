@@ -42,10 +42,10 @@ const voirToutesLesInfosMeConcernant =
 class Chat extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      opened: false
+    };
   }
-  state = {
-    opened: false
-  };
 
   toggleFloating = ({ opened }) => {
     this.setState({ opened });
