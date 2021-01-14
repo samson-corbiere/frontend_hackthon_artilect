@@ -6,7 +6,6 @@ import PhotoMachine from "../components/PhotoMachine"
 import "../styles/Accueil.css";
 import axios from "axios";
 
-
 class Accueil extends Component {
     constructor(props) {
       super(props);
