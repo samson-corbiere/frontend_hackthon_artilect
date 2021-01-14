@@ -9,6 +9,7 @@ import Direct from "./components/Direct";
 import Machine from "./components/Machine";
 import Profile from "./Pages/Profile"
 import ProjectsList from "./Pages/ProjectsList";
+import Project from "./Pages/Project"
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/machine/:id" component={Machine}></Route>
           <Route exact path="/projets" component={ProjectsList}></Route>
           <Route exact path="/makers" component={Makers}></Route>
+          <Route exact path="/projet/:id" component={Project}></Route>
           <Route exact path="/direct" component={Direct}></Route>
           <Route exact path="/profil/:id" component={Profile}></Route>
           </Switch>

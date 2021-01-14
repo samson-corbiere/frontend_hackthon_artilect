@@ -37,9 +37,11 @@ function Profile() {
                     <h2>
                         Mes Projets
                     </h2>
+        
                     <CardSquare />
                     <PrincipalButton textButton="Contacter sur Discord" />
                     <PrincipalButton textButton="Envoyer un e-mail" />
+                 
                 </div>
                 :
                 <div> 

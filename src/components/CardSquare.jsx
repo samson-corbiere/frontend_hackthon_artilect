@@ -64,18 +64,17 @@ const WrapImg = styled.div`
 const CardSquare = ({ image_project, title, status, photo_machine, name_machine }) => {
   return (
     <div>
-      {projectdata.map(item =>
+  
       <WrapCard>
         <WrapImg>
-          <Img src={item.photo_link} alt="Image Projet" />
+          <Img src={image_project} alt="Image Projet" />
         </WrapImg>
-        <ProjetTitle>{item.name}</ProjetTitle>
+        <ProjetTitle>{title}</ProjetTitle>
         <WrapItem>
-          <Status type="button" value={item.status} />
-          <Machine src={item.photo_machine} alt={item.name_machine} />
+          <Status type="button" value={status} />
+          <Machine src={photo_machine} alt={name_machine} />
         </WrapItem>
       </WrapCard>
-       )}
     </div>
   );
 };
