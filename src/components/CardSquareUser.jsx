@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import markbois from "../img/markbois.png";
 import user from "../img/user1.jpeg";
+import imgCompetence from "./imgCompetence";
 
 const WrapCard = styled.div`
   width: 7em;
@@ -43,6 +44,8 @@ const Img = styled.img`
   z-index:10;
   position: absolute;
   bottom: 5%;
+  filter: grayscale(20%);
+  
 `
 const Machine = styled.img`
   width: 1.5em;
@@ -75,8 +78,7 @@ const cardSquareUser = () => {
       <WrapItems>
       <WrapCompetence>
         <WrapLevel>
-          <Machine src={couture} alt="Machine"/>
-          <Machine src={couture} alt="Machine"/>
+          <imgCompetence />
         </WrapLevel>
       </WrapCompetence>
       <WrapMachine>
