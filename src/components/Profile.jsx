@@ -16,7 +16,11 @@ function Profile() {
             {profileData.map(item =>
                 item.competence.map(e =>
                     <>
-                        {/* <PhotoMaker photo={item.photo} personality={item.personality}/> */}
+                        {/* <PhotoMaker user_name= {e.name} 
+                        photo={item.photo} 
+                        personality_name={item.personality.map(e => {e.name})} 
+                        personality_url={item.personality.map(e => {e.url})} /> */}
+
                         <div className="user-competence"> {e.name} </div>
                     </>
                 ))}
