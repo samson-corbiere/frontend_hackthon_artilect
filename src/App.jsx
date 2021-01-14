@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Chat from "./components/Chat";
 import BottomNavigation from "./components/BottomNavigation";
 import {
@@ -13,11 +14,12 @@ import Projects from "./components/Projects";
 import Communaute from "./components/Communaute";
 import Machine from "./components/Machine";
 import Direct from "./components/Direct";
+import Machine from "./components/Machine";
+import CardSquare from "./components/CardSquare";
+import Profile from "./components/Profile"
+import PhotoMaker from "./components/PhotoMaker";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
@@ -25,6 +27,14 @@ class App extends React.Component {
         <div className="main">
           <Chat />
           <main>
+          {/* <p>je suis la page d'accueil</p> */}
+          <Chat />
+          <main>
+            <Machine />
+            <CardSquare />
+            <Profile />
+            {" "}
+            {/* accueil machine projets communauté  direct */}
             <Switch>
               <Route exact path="/Accueil" component={Accueil}></Route>
               <Route exact path="/Machines" component={Machine}></Route>
@@ -36,6 +46,21 @@ class App extends React.Component {
           <BottomNavigation />
         </div>
       </Router>
+
+            </Switch>
+          </main>
+          <BottomNavigation />
+
+          {/* <footer>A&F Développement</footer> */}
+        </div>
+      </Router>
+      <div className="application">
+        <Chat/>
+        <Machine />
+        <CardSquare />
+        <Profile />
+        <PhotoMaker />
+      </div>
     );
   }
 }

@@ -1,17 +1,15 @@
 import React from "react";
 
-class Machine extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
-  render() {
-    return (
-      <div className="main">
-        <p>je suis la page machine</p>
-      </div>
-    );
-  }
+import PrincipalButton from "./PrincipalButton";
+
+function Machine() {
+  return (
+    <div>
+      <PrincipalButton textButton="salut"/>
+      <PrincipalButton textButton="modifie moi stp"/>
+    </div>
+  );
 }
 
 export default Machine;
