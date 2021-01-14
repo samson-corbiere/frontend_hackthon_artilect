@@ -7,7 +7,7 @@ import meca from "../img/progra.png";
 import styled from "styled-components";
 
 const Img = styled.img`
-  width: 1.5em;
+  width: 3em;
 `
 const imgCompetence0 = [
   meca,
@@ -35,10 +35,11 @@ const imgCompetence = () => {
   let imgComp = getRandomImg(imgCompetence0);
   let imgComp1 = getRandomImg1(imgCompetence1)
   return (
-    <>
-    <Img src={imgComp} />
-    <Img src={imgComp1} />
-    </>
+    <div>
+    <Img src={imgComp} alt="compétence"/>
+    <Img src={imgComp1} alt="compétence"/>
+    {console.log(imgComp1)}
+    </div>
   )
 }
 
