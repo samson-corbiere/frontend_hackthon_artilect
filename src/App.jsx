@@ -12,6 +12,8 @@ class App extends React.Component {
     return (
       <div className="application">
         <Chat/>
+        <Machine />
+
       </div>
     );
   }
