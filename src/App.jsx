@@ -4,6 +4,8 @@ import "./App.css";
 import Chat from "./components/Chat";
 import Machine from "./components/Machine";
 import CardSquare from "./components/CardSquare";
+import Profile from "./components/Profile"
+
 
 class App extends React.Component {
   constructor(props) {
@@ -16,7 +18,7 @@ class App extends React.Component {
         <Chat/>
         <Machine />
         <CardSquare />
-
+        <Profile />
       </div>
     );
   }
