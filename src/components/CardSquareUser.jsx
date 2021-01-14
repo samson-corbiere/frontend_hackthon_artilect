@@ -1,6 +1,5 @@
 import React from "react";
 import styled from 'styled-components';
-
 import markbois from "../img/markbois.png";
 import user from "../img/user1.jpeg";
 import imgCompetence from "./imgCompetence";
@@ -67,14 +66,14 @@ const WrapImg = styled.div`
   height: 5em;
 `
 
-const cardSquareUser = () => {
+const cardSquareUser = ({name, machine, machine_name, photo_user}) => {
   return (
     <WrapCard>
       <WrapImg>
       <ImgMark src={markbois} alt="markerBois" />
-      <Img src={user} alt="User"/>
+      <Img src={photo_user} alt="User"/>
       </WrapImg>
-      <ProjetTitle>Nom de la personne</ProjetTitle>
+      <ProjetTitle>{name}</ProjetTitle>
       <WrapItems>
       <WrapCompetence>
         <WrapLevel>
@@ -82,8 +81,8 @@ const cardSquareUser = () => {
         </WrapLevel>
       </WrapCompetence>
       <WrapMachine>
-        <Machine src="https://artilect.fr/wp-content/uploads/doliconnect/product/183/LASER-SP100-Plan%20de%20travail%2080-200x200.png" alt="Machine"/>
-        <Machine src="https://artilect.fr/wp-content/uploads/doliconnect/product/183/LASER-SP100-Plan%20de%20travail%2080-200x200.png" alt="Machine"/>
+        <Machine src={machine} alt={machine_name} />
+        <Machine src={machine} alt={machine_name} />
       </WrapMachine>
       </WrapItems>
     </WrapCard>
