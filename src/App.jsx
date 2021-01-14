@@ -5,6 +5,7 @@ import Chat from "./components/Chat";
 import Machine from "./components/Machine";
 import CardSquare from "./components/CardSquare";
 import Profile from "./components/Profile"
+import ProjectsList from "./components/ProjectsList";
 
 
 class App extends React.Component {
@@ -17,8 +18,8 @@ class App extends React.Component {
       <div className="application">
         <Chat/>
         <Machine />
-        <CardSquare />
         <Profile />
+        <ProjectsList />
       </div>
     );
   }
