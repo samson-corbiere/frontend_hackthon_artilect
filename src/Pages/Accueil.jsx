@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
-import "./Accueil.css";
+import "../styles/Accueil.css";
 
 class Accueil extends React.Component {
   constructor(props) {
@@ -9,11 +9,13 @@ class Accueil extends React.Component {
 
   render() {
     return (
-      <Router>
-        <div className="main">
-          <p>je suis la page d'accueil</p>
-        </div>
-      </Router>
+      <div className="background-home">
+        <Router>
+          <div className="main">
+            <div>je suis la page d'accueil</div>
+          </div>
+        </Router>
+      </div>
     );
   }
 }

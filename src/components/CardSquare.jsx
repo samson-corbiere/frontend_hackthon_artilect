@@ -58,16 +58,16 @@ const WrapImg = styled.div`
   height: 4em;
 `
 
-const cardSquare = () => {
+const cardSquare = ({image_project, title, status, photo_machine, name_machine}) => {
   return (
     <WrapCard>
       <WrapImg>
-      <Img src="https://fabcafe-manager.com/uploads/project_image/743/project_image.jpg" alt="Image Projet"/>
+      <Img src={image_project} alt="Image Projet" />
       </WrapImg>
-      <ProjetTitle>Nom de projet</ProjetTitle>
+      <ProjetTitle>{title}</ProjetTitle>
       <WrapItem>
-        <Status type="button" value="en cours"/>
-        <Machine src="https://artilect.fr/wp-content/uploads/doliconnect/product/183/LASER-SP100-Plan%20de%20travail%2080-200x200.png" alt="Machine"/>
+        <Status type="button" value={status}/>
+        <Machine src={photo_machine} alt={name_machine}/>
       </WrapItem>
     </WrapCard>
   );

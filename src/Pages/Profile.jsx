@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import userdata from "../static/user.json";
-import PhotoMaker from "./PhotoMaker"
+import PhotoMaker from "../components/PhotoMaker"
 
 function Profile() {
 
