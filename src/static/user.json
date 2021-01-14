@@ -5,12 +5,7 @@
   "photo": "https://randomuser.me/api/portraits/men/40.jpg",
   "email": "john.doe@gmail.com",
   "link_discord": "https://discord.com/",
-  "personality" : [
-    {
-    "id": 2,
-    "name": "Bois"
-    }
-  ],
+  "personality" : "Bois",
   "competence" : [
     {
       "name": "Mécanique",
@@ -52,17 +47,12 @@
   ]
   },
   {
-    "id": 3,
+    "id": 2,
     "name": "Stella Mitchelle",
     "photo": "https://randomuser.me/api/portraits/women/47.jpg",
     "email": "st.mail@gmail.com",
     "link_discord": "https://discord.com/",
-    "personality" : [
-      {
-      "id": 2,
-      "name": "Bois"
-      }
-    ],
+    "personality" : "Acier",
     "competence" : [
       {
         "name": "Mécanique",
