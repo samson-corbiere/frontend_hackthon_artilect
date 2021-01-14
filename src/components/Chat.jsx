@@ -46,7 +46,7 @@ class Chat extends React.Component {
     super(props);
     this.state = {
       opened: false,
-      botId: this.props.botId
+      botId: 0
     };
   }
 
@@ -55,7 +55,7 @@ class Chat extends React.Component {
   }
 
   toggleFloating = ({ opened }) => {
-    this.setState({ opened  });
+    this.setState({ opened });
     console.log("CHAT toggleFloating opened => " +opened)
   };
 
@@ -66,6 +66,14 @@ class Chat extends React.Component {
       this.setState({opened : true})
       // this.state.opened = this.props.opened
       console.log("CHAT render in if")
+      // console.log("CHAT render in if" .this.props.botId)
+    }
+
+    if (this.state.botId ==! 0){
+      console.log("CHAT render if IDBOT")
+    } else {
+      console.log("CHAT render if else IDBOT ==> " +this.state.botId)
+
     }
 
     console.log("CHAT render this.state.opened ==> " +this.state.opened)
