@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom";
 
 function Profile() {
 
-    const {id} = useParams()
+    const { id } = useParams()
 
     const [profileData, setProfile] = useState([])
 
@@ -19,33 +19,32 @@ function Profile() {
     return (
         <div style={{ margin: "auto" }}>
             {profileData.map(item =>
-                item.id == id ? 
-                <div className="container">
-                    <input type="button" value="Edit" className="button-edit" />
-                    <PhotoMaker
-                        user_name={item.name}
-                        photo={item.photo}
-                        personality_name={item.personality.name}
-                        personality_url={item.personality.url}
-                    />
-                    <h2 className="name">{item.name}</h2>
-                    <div className="container-competence">
-                        {item.competence.map(comp =>
-                            <p className="competence">{comp.name}</p>
-                        )}
-                    </div>
-                    <h2>
-                        Mes Projets
+                item.id == id ?
+                    <div className="container">
+                        <input type="button" value="Edit" className="button-edit" />
+                        <PhotoMaker
+                            user_name={item.name}
+                            photo={item.photo}
+                            personality_name={item.personality.name}
+                            personality_url={item.personality.url}
+                        />
+                        <h2 className="name">{item.name}</h2>
+                        <div className="container-competence">
+                            {item.competence.map(comp =>
+                                <p className="competence">{comp.name}</p>
+                            )}
+                        </div>
+                        <h2>
+                            Mes Projets
                     </h2>
-        
-                    <CardSquare />
-                    <PrincipalButton textButton="Contacter sur Discord" />
-                    <PrincipalButton textButton="Envoyer un e-mail" />
-                 
-                </div>
-                :
-                <div> 
-                </div>
+                        <CardSquare />
+                        <PrincipalButton textButton="Contacter sur Discord" />
+                        <PrincipalButton textButton="Envoyer un e-mail" />
+
+                    </div>
+                    :
+                    <div>
+                    </div>
             )}
 
         </div>
