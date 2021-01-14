@@ -19,7 +19,6 @@ function ProjectsList() {
         setProjectData(data)
     }, [])
 
-    console.log({projectData})
     return (
         <div>
             <PrincipalTitle textTitle={"Les projets"} />

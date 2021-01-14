@@ -7,6 +7,7 @@ import { useParams } from "react-router-dom";
 import PhotoMaker from "../components/photoMachine";
 import "../styles/projet.css"
 
+
 function Project() {
 
     const Img = styled.img`

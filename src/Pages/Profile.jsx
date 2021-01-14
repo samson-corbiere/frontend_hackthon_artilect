@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import userdata from "../static/user.json";
 import PhotoMaker from "../components/PhotoMaker";
 import PrincipalButton from "../components/PrincipalButton";
 import '../styles/Profile.css';
 import CardSquare from "../components/CardSquare";
 import { useParams } from "react-router-dom";
+import axios from "axios";
 
 function Profile() {
 
@@ -13,39 +13,36 @@ function Profile() {
     const [profileData, setProfile] = useState([])
 
     useEffect(() => {
-        setProfile(userdata)
+        axios.get('http://localhost:5000/api/userProjects')
+        .then(res => res.data[0])
+        .then(data => setProfile(data))
     }, [])
 
     return (
         <div style={{ margin: "auto" }}>
-            {profileData.map(item =>
-                item.id == id ?
                     <div className="container">
-                        <input type="button" value="Edit" className="button-edit" />
                         <PhotoMaker
-                            user_name={item.name}
-                            photo={item.photo}
-                            personality_name={item.personality.name}
-                            personality_url={item.personality.url}
+                            user_name={profileData.user_name}
+                            photo={profileData.url_photo}
+                            personality_name={profileData.personality_name}
+                            personality_url={profileData.personality_url}
                         />
-                        <h2 className="name">{item.name}</h2>
+                        <h2 className="name">{profileData.user_name}</h2>
                         <div className="container-competence">
-                            {item.competence.map(comp =>
-                                <p className="competence">{comp.name}</p>
-                            )}
+                                <p className="competence">{profileData.competence_name}</p>
                         </div>
                         <h2>
                             Mes Projets
                     </h2>
-                        <CardSquare />
+                        <CardSquare image_project={profileData.image} 
+                        title={profileData.project_name} 
+                        status={profileData.status} 
+                        />
                         <PrincipalButton textButton="Contacter sur Discord" />
                         <PrincipalButton textButton="Envoyer un e-mail" />
 
                     </div>
-                    :
-                    <div>
-                    </div>
-            )}
+
 
         </div>
 
