@@ -12,7 +12,7 @@ class Accueil extends React.Component {
       <div className="background-home">
         <Router>
           <div className="main">
-            <p>je suis la page d'accueil</p>
+            <div>je suis la page d'accueil</div>
           </div>
         </Router>
       </div>

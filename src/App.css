@@ -13,6 +13,13 @@
   }
 }
 
+.navigationFooter {
+  width: 66%;
+  padding-left: 5%;
+  position: fixed;
+  bottom: 4.5%;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

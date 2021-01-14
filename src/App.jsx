@@ -22,15 +22,22 @@ function App() {
           <Route exact path="/accueil" component={Accueil}></Route>
           <Route exact path="/machine/:id" component={Machine}></Route>
           <Route exact path="/projets" component={ProjectsList}></Route>
-          <Route exact path="/communaute" component={Communaute}></Route>
+          <Route exact path="/makers" component={Communaute}></Route>
           <Route exact path="/direct" component={Direct}></Route>
           <Route exact path="/profil" component={Profile}></Route>
-        </Switch>
-        <BottomNavigation />
-      </div>
-    </Router>
-  );
+          </Switch>
+          <div className="allFooter">
+          <div className="navigationFooter">
+              <BottomNavigation />
+            </div>
+            <div className="chatPlace">
+              <Chat />
+            </div>
+          </div>
+        </div>
+      </Router>
+  )
 }
 
 
-export default App
+export default App;
