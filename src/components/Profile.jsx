@@ -1,7 +1,6 @@
-import userEvent from "@testing-library/user-event";
 import React, { useEffect, useState } from "react";
-import userdata from "../user.json";
-import PhotoMaker from "./PhotoMaker"
+import userdata from "../static/user.json";
+// import PhotoMaker from "./PhotoMaker"
 
 function Profile() {
 
@@ -17,7 +16,7 @@ function Profile() {
             {profileData.map(item =>
                 item.competence.map(e =>
                     <>
-                        <PhotoMaker photo={item.photo} personality={item.personality}/>
+                        {/* <PhotoMaker photo={item.photo} personality={item.personality}/> */}
                         <div className="user-competence"> {e.name} </div>
                     </>
                 ))}
