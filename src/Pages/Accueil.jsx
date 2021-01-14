@@ -17,21 +17,21 @@ class Accueil extends React.Component {
   // IMPORTANT DON'T DELETE IT
   handleClick(event) {
     const id = event.target.id;
-    console.log("ACCUEIL handleclick id ==> " + id);
+    console.log("--- ACCUEIL handleclick id ==> " + id);
     this.setState(
       {
         openChatbot: !this.state.openChatbot,
         botId: id
       },
       function() {
-        console.log("setState completed", this.state);
+        console.log("--- ACCUEIL handleclick setState completed", this.state);
       }
     );
-    console.log("ACCUEIL handleclick botId ==> " + this.state.botId);
+    console.log("--- ACCUEIL  handleclick botId ==> " + this.state.botId);
   }
 
   render() {
-    console.log("ACCUEIL render");
+    console.log("--- ACCUEIL render");
     return (
       <div className="background-home">
         <Router>
@@ -54,7 +54,10 @@ class Accueil extends React.Component {
             </button>
           </div>
         </Router>
-        <Chat opened={this.state.openChatbot} botId={this.state.botId} />
+        <Chat 
+          opened={this.state.openChatbot} 
+          botId={this.state.botId} 
+          />
       </div>
     );
   }
