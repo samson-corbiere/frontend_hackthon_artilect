@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
+import "./Accueil.css";
 
 class Accueil extends React.Component {
   constructor(props) {
@@ -11,13 +12,6 @@ class Accueil extends React.Component {
       <Router>
         <div className="main">
           <p>je suis la page d'accueil</p>
-          {/* <Chat />
-          <BottomNavigation />
-          <main>
-            <Route exact path="/Projects" component={Projects}></Route>
-          </main> */}
-          
-          {/* <footer>A&F Développement</footer> */}
         </div>
       </Router>
     );
