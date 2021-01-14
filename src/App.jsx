@@ -1,64 +1,41 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, useParams } from "react-router-dom";
 import Chat from "./components/Chat";
 import BottomNavigation from "./components/BottomNavigation";
-import Accueil from "./components/Accueil";
-import Projects from "./components/Projects";
-import Communaute from "./components/Communaute";
+import Accueil from "./Pages/Accueil";
+import Makers from "./Pages/Makers";
 import Direct from "./components/Direct";
 import Machine from "./components/Machine";
-import CardSquare from "./components/CardSquare";
-import CardSquareUser from "./components/CardSquareUser";
-import Profile from "./components/Profile";
-import PhotoMaker from "./components/PhotoMaker";
+import Profile from "./Pages/Profile"
+import ProjectsList from "./Pages/ProjectsList";
 
-class App extends React.Component {
-  render() {
-    return (
-      <Router>
-        <div className="main">
-          <Chat />
-          <Machine />
-          <CardSquare />
-          <CardSquareUser />
-          <Profile />
-          <PhotoMaker />
-          <Switch>
-            <Route exact path="/Accueil" component={Accueil}></Route>
-            <Route exact path="/Machines" component={Machine}></Route>
-            <Route exact path="/Projets" component={Projects}></Route>
-            <Route exact path="/Communaute" component={Communaute}></Route>
-            <Route exact path="/Direct" component={Direct}></Route>
+function App() {
+
+  return (
+    <Router>
+      <div className="main">
+        <Chat />
+        <Switch>
+          <Route exact path="/" component={Accueil}></Route>
+          <Route exact path="/machine/:id" component={Machine}></Route>
+          <Route exact path="/projets" component={ProjectsList}></Route>
+          <Route exact path="/makers" component={Makers}></Route>
+          <Route exact path="/direct" component={Direct}></Route>
+          <Route exact path="/profil" component={Profile}></Route>
           </Switch>
-          <BottomNavigation />
+          <div className="allFooter">
+          <div className="navigationFooter">
+              <BottomNavigation />
+            </div>
+            <div className="chatPlace">
+              <Chat />
+            </div>
+          </div>
         </div>
       </Router>
-    );
-  }
+  )
 }
 
+
 export default App;
-
-/* 
-<div className="main">
-          <Chat />
-          <main>
-          <Chat />
-            <Machine />
-            <CardSquare />
-            <Profile />
-            <PhotoMaker />
-          <main>
-          <Switch>
-              <Route exact path="/Accueil" component={Accueil}></Route>
-              <Route exact path="/Machines" component={Machine}></Route>
-              <Route exact path="/Projets" component={Projects}></Route>
-              <Route exact path="/Communaute" component={Communaute}></Route>
-              <Route exact path="/Direct" component={Direct}></Route>
-            </Switch>
-          </main>
-          <BottomNavigation />
-        </div>
-
-*/

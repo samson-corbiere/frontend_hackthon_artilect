@@ -1,142 +1,141 @@
 [
-    {
-      "id":"1",
-      "name":"laser (SP500)",
-      "pseudo":"Norbert",
-      "description":"Les découpes laser permettent de découper des plaques de bois, d’acrylique, de carton, mais aussi certains tissus, du cuir, etc… sur des épaisseurs allant jusqu’a 10mm suivant les matériaux.  Il est aussi possible de graver les matériaux précédemment cites ainsi que la pierre, le verre, etc…",
-      "url_photo":"https://artilect.fr/wp-content/uploads/doliconnect/product/8/LASER-SP500-Plan%20de%20travail%2079-200x200.png",
-      "video_link":"https://youtu.be/tKt2TPgfY2o",
-      "notice":"/frontend_hackthon_artilect/artilect/src/notice/laser-SP500-notice.pdf",
-      "discord_link":"https://discord.gg/Vu349ba2",
-      "project": [
-        {
-          "id":1,
-          "name":"Panneaux Signalétique",
-          "status":"Terminé",
-          "description":"Création et réalisation de panneaux pour la signalétique intérieur et extérieur",
-          "discord_link":"https://discord.gg/yxPdTm72",
-          "photo_link":"https://artifab.cmar-paca.fr/uploads/project_image/124/project_image.jpg"
-        },
-        {
-          "id":2,
-          "name":"Sapin DIY",
-          "status":"En cours",
-          "description":"Création de divers éléments : le pied du sapin, les flocons formant la cyme du sapin, les anneaux formant son tronc... Et l’étoile qui finalise notre arbre de Noël",
-          "discord_link":"https://discord.gg/qmVZ2N5P",
-          "photo_link":"https://fabcafe-manager.com/uploads/project_image/743/project_image.jpg"
-        }
-      ],
-      "personality": [
-        {
-          "id": 1,
-          "name":"Caoutchouc"
-        }
-      ],
-      "user_machine": [
-        {
-          "id": 1,
-          "name": "John DOE",
-          "photo": "https://randomuser.me/api/portraits/men/40.jpg",
-          "email": "john.doe@gmail.com",
-          "link_discord": "https://discord.com/",
-          "personality" : [
-            {
+  {
+    "id": "1",
+    "name": "laser (SP500)",
+    "pseudo": "Norbert",
+    "description": "Les découpes laser permettent de découper des plaques de bois, d’acrylique, de carton, mais aussi certains tissus, du cuir, etc… sur des épaisseurs allant jusqu’a 10mm suivant les matériaux.  Il est aussi possible de graver les matériaux précédemment cites ainsi que la pierre, le verre, etc…",
+    "url_photo": "https://artilect.fr/wp-content/uploads/doliconnect/product/8/LASER-SP500-Plan%20de%20travail%2079-200x200.png",
+    "video_link": "https://youtu.be/tKt2TPgfY2o",
+    "notice": "/frontend_hackthon_artilect/artilect/src/notice/laser-SP500-notice.pdf",
+    "discord_link": "https://discord.gg/Vu349ba2",
+    "project": [
+      {
+        "id": 1,
+        "name": "Panneaux Signalétique",
+        "status": "Terminé",
+        "description": "Création et réalisation de panneaux pour la signalétique intérieur et extérieur",
+        "discord_link": "https://discord.gg/yxPdTm72",
+        "photo_link": "https://artifab.cmar-paca.fr/uploads/project_image/124/project_image.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Sapin DIY",
+        "status": "En cours",
+        "description": "Création de divers éléments : le pied du sapin, les flocons formant la cyme du sapin, les anneaux formant son tronc... Et l’étoile qui finalise notre arbre de Noël",
+        "discord_link": "https://discord.gg/qmVZ2N5P",
+        "photo_link": "https://fabcafe-manager.com/uploads/project_image/743/project_image.jpg"
+      }
+    ],
+    "personality": [
+      {
+        "id": 1,
+        "name": "Caoutchouc"
+      }
+    ],
+    "user_machine": [
+      {
+        "id": 1,
+        "name": "John DOE",
+        "photo": "https://randomuser.me/api/portraits/men/40.jpg",
+        "email": "john.doe@gmail.com",
+        "link_discord": "https://discord.com/",
+        "personality": [
+          {
             "id": 2,
             "name": "Bois"
-            }
-          ],
-          "competence" : [
-            {
-              "name": "Mécanique",
-              "level": "1",
-              "reward":"42"
-            },
-            {
-              "name": "Électronique",
-              "level": "2",
-              "reward":"190"
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "name": "Ethel Wells",
-          "photo": "https://randomuser.me/api/portraits/women/69.jpg",
-          "email": "wells.e@gmail.com",
-          "link_discord": "https://discord.com/",
-          "personality" : [
-            {
+          }
+        ],
+        "competence": [
+          {
+            "name": "Mécanique",
+            "level": "1",
+            "reward": "42"
+          },
+          {
+            "name": "Électronique",
+            "level": "2",
+            "reward": "190"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Ethel Wells",
+        "photo": "https://randomuser.me/api/portraits/women/69.jpg",
+        "email": "wells.e@gmail.com",
+        "link_discord": "https://discord.com/",
+        "personality": [
+          {
             "id": 3,
             "name": "Acier"
-            }
-          ],
-          "competence" : [
-            {
-              "name": "Mécanique",
-              "level": "2",
-              "reward":"124"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id":"2",
-      "name":"laser (SP100)",
-      "pseudo":"Robert",
-      "description":"Couleur de matériau disponible : blanc, rouge, bleu, noir, vert et jaune Épaisseur de couche minimale : 0.10m Taille d’impression : 220x220x250mm Format d’entrée : STL, GCODE, OBJ Matériau d’impression : PLA",
-      "url_photo":"https://artilect.fr/wp-content/uploads/doliconnect/product/183/LASER-SP100-Plan%20de%20travail%2080-200x200.png",
-      "video_link":"https://youtu.be/tKt2TPgfY2o",
-      "notice":"https://lesatelierseclaires-manager.com/uploads/machine_file/37/LASER_mode-d-emploi_version-PRINT_2016-10-01.pdf",
-      "discord_link":"https://discord.gg/rMktMc9Y",
-      "project": [
-        {
-          "id":3,
-          "name":"Tampons blagues de scientifiques",
-          "status":"Bloqué",
-          "description":"Qui n'a jamais rêvé d’égayer des réunions de financement de plans de recherche ou des signature de projets européens avec une petites touches fantasques et burlesque pour les administrateurs qui devront éplucher ces documents lors des audit et demandes de remontée de fonds ? Voici la réponse : les  meilleures blagues de de Stephen Hawkins en tampon, humour et joie dans vos soirées CSTI ou au labo !",
-          "discord_link":"https://discord.gg/mV9Rhukv",
-          "photo_link":"https://fablab.ledome.info/uploads/project_image/2483/project_image.jpg"
-        }
-      ],
-      "personality": [
-        {
-          "id": 4,
-          "name":"Brique"
-        }
-      ],
-      "user_machine": [
-        {
-          "id": 3,
-          "name": "Stella Mitchelle",
-          "photo": "https://randomuser.me/api/portraits/women/47.jpg",
-          "email": "st.mail@gmail.com",
-          "link_discord": "https://discord.com/",
-          "personality" : [
-            {
+          }
+        ],
+        "competence": [
+          {
+            "name": "Mécanique",
+            "level": "2",
+            "reward": "124"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "laser (SP100)",
+    "pseudo": "Robert",
+    "description": "Couleur de matériau disponible : blanc, rouge, bleu, noir, vert et jaune Épaisseur de couche minimale : 0.10m Taille d’impression : 220x220x250mm Format d’entrée : STL, GCODE, OBJ Matériau d’impression : PLA",
+    "url_photo": "https://artilect.fr/wp-content/uploads/doliconnect/product/183/LASER-SP100-Plan%20de%20travail%2080-200x200.png",
+    "video_link": "https://youtu.be/tKt2TPgfY2o",
+    "notice": "https://lesatelierseclaires-manager.com/uploads/machine_file/37/LASER_mode-d-emploi_version-PRINT_2016-10-01.pdf",
+    "discord_link": "https://discord.gg/rMktMc9Y",
+    "project": [
+      {
+        "id": 3,
+        "name": "Tampons blagues de scientifiques",
+        "status": "Bloqué",
+        "description": "Qui n'a jamais rêvé d’égayer des réunions de financement de plans de recherche ou des signature de projets européens avec une petites touches fantasques et burlesque pour les administrateurs qui devront éplucher ces documents lors des audit et demandes de remontée de fonds ? Voici la réponse : les  meilleures blagues de de Stephen Hawkins en tampon, humour et joie dans vos soirées CSTI ou au labo !",
+        "discord_link": "https://discord.gg/mV9Rhukv",
+        "photo_link": "https://fablab.ledome.info/uploads/project_image/2483/project_image.jpg"
+      }
+    ],
+    "personality": [
+      {
+        "id": 4,
+        "name": "Brique"
+      }
+    ],
+    "user_machine": [
+      {
+        "id": 3,
+        "name": "Stella Mitchelle",
+        "photo": "https://randomuser.me/api/portraits/women/47.jpg",
+        "email": "st.mail@gmail.com",
+        "link_discord": "https://discord.com/",
+        "personality": [
+          {
             "id": 2,
             "name": "Bois"
-            }
-          ],
-          "competence" : [
-            {
-              "name": "Mécanique",
-              "level": "2",
-              "reward":"122"
-            },
-            {
-              "name": "Électronique",
-              "level": "2",
-              "reward":"190"
-            },
-            {
-              "name": "Programation",
-              "level": "1",
-              "reward":"22"
-            }
-          ]
-        }
-      ]
-    }
-  ]
-  
+          }
+        ],
+        "competence": [
+          {
+            "name": "Mécanique",
+            "level": "2",
+            "reward": "122"
+          },
+          {
+            "name": "Électronique",
+            "level": "2",
+            "reward": "190"
+          },
+          {
+            "name": "Programation",
+            "level": "1",
+            "reward": "22"
+          }
+        ]
+      }
+    ]
+  }
+]
