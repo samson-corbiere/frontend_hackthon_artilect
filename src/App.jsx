@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Chat from "./components/Chat";
 import BottomNavigation from "./components/BottomNavigation";
 import {
@@ -16,11 +17,9 @@ import Direct from "./components/Direct";
 import Machine from "./components/Machine";
 import CardSquare from "./components/CardSquare";
 import Profile from "./components/Profile"
+import PhotoMaker from "./components/PhotoMaker";
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     return (
@@ -53,6 +52,7 @@ class App extends React.Component {
         <Machine />
         <CardSquare />
         <Profile />
+        <PhotoMaker />
       </div>
     );
   }

@@ -1,0 +1,22 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10%;
+}
+
+.photo-user {
+  z-index: 1;
+  width: 150px;
+  border: 2px solid white;
+  box-sizing: border-box;
+  border-radius: 200px;
+}
+
+.wood {
+  position: absolute;
+  border-radius: 200px;
+  overflow: hidden;
+  width: 200px;
+}
