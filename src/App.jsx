@@ -37,26 +37,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-/* 
-<div className="main">
-          <Chat />
-          <main>
-          <Chat />
-            <Machine />
-            <CardSquare />
-            <Profile />
-            <PhotoMaker />
-          <main>
-          <Switch>
-              <Route exact path="/Accueil" component={Accueil}></Route>
-              <Route exact path="/Machines" component={Machine}></Route>
-              <Route exact path="/Projets" component={Projects}></Route>
-              <Route exact path="/Communaute" component={Communaute}></Route>
-              <Route exact path="/Direct" component={Direct}></Route>
-            </Switch>
-          </main>
-          <BottomNavigation />
-        </div>
-
-*/
