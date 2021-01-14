@@ -22,9 +22,9 @@ function ProjectsList() {
     return (
         <div>
             <PrincipalTitle textTitle={"Les projets"} />
-            <CardsContainer>
-                {projectData.map(e =>
-                    <Link to="/">
+            {projectData.map(e =>
+                <CardsContainer>
+                    <Link to={`/projet/${e.id}`}>
                         <CardSquare
                             image_project={e.photo_link}
                             title={e.name}
@@ -32,8 +32,9 @@ function ProjectsList() {
                             photo_machine={e.machine.map(item => item.url_photo)}
                             name_machine={e.machine.map(item => item.pseudo)} />
                     </Link>
-                )}
-            </CardsContainer>
+                </CardsContainer>
+            )}
+
         </div>
     )
 }

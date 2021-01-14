@@ -1,13 +1,14 @@
-.container {
+.container-photo-profile {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 10%;
+  margin: 10% 0%;
 }
 
 .photo-user {
   z-index: 1;
+  height: 150px;
   width: 150px;
   border: 2px solid white;
   box-sizing: border-box;
