@@ -25,6 +25,8 @@ class App extends React.Component {
     return (
       <Router>
         <div className="main">
+          <Chat />
+          <main>
           {/* <p>je suis la page d'accueil</p> */}
           <Chat />
           <main>
@@ -39,6 +41,11 @@ class App extends React.Component {
               <Route exact path="/Projets" component={Projects}></Route>
               <Route exact path="/Communaute" component={Communaute}></Route>
               <Route exact path="/Direct" component={Direct}></Route>
+            </Switch>
+          </main>
+          <BottomNavigation />
+        </div>
+      </Router>
 
             </Switch>
           </main>
