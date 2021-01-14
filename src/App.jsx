@@ -9,6 +9,7 @@ import Communaute from "./components/Communaute";
 import Direct from "./components/Direct";
 import Machine from "./components/Machine";
 import CardSquare from "./components/CardSquare";
+import CardSquareUser from "./components/CardSquareUser";
 import Profile from "./components/Profile";
 import PhotoMaker from "./components/PhotoMaker";
 
@@ -20,7 +21,7 @@ class App extends React.Component {
           <Chat />
           <Machine />
           <CardSquare />
-          <CardUser />
+          <CardSquareUser />
           <Profile />
           <PhotoMaker />
           <Switch>
