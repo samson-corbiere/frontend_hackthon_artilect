@@ -33,7 +33,17 @@ const WrapItem = styled.div`
 `
 const Img = styled.img`
   position: absolute;
-  width: 100%;
+  width: 120%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  &:hover {
+    filter: grayscale(90%);
+    width: 170%;
+    transition-property: filter width;
+    transition-duration: 0.3s;
+  }
 `
 const Machine = styled.img`
   width: 1.5em;
