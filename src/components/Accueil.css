@@ -1,0 +1,14 @@
+/* .bg {
+  width: 100%;
+  min-height: -webkit-fill-available;
+  object-fit: cover;
+}
+ */
+
+body {
+  background-image:url("https://images.pexels.com/photos/347139/pexels-photo-347139.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
