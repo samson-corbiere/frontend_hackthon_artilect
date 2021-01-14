@@ -8,9 +8,6 @@ import Projects from "./components/Projects";
 import Communaute from "./components/Communaute";
 import Direct from "./components/Direct";
 import Machine from "./components/Machine";
-import CardSquare from "./components/CardSquare";
-import Profile from "./components/Profile";
-import PhotoMaker from "./components/PhotoMaker";
 
 class App extends React.Component {
   render() {
@@ -18,10 +15,6 @@ class App extends React.Component {
       <Router>
         <div className="main">
           <Chat />
-          <Machine />
-          <CardSquare />
-          <Profile />
-          <PhotoMaker />
           <Switch>
             <Route exact path="/Accueil" component={Accueil}></Route>
             <Route exact path="/Machines" component={Machine}></Route>
@@ -36,4 +29,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default App
