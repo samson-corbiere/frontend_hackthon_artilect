@@ -5,6 +5,7 @@
   "photo": "https://randomuser.me/api/portraits/men/40.jpg",
   "email": "john.doe@gmail.com",
   "link_discord": "https://discord.com/",
+
   "personality" : {
     "id": 1,
     "url": "https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg",
