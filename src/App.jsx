@@ -18,10 +18,6 @@ class App extends React.Component {
       <Router>
         <div className="main">
           <Chat />
-          <Machine />
-          <CardSquare />
-          <Profile />
-          <PhotoMaker />
           <Switch>
             <Route exact path="/Accueil" component={Accueil}></Route>
             <Route exact path="/Machines" component={Machine}></Route>
