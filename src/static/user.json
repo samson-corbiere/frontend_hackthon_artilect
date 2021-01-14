@@ -5,21 +5,12 @@
   "photo": "https://randomuser.me/api/portraits/men/40.jpg",
   "email": "john.doe@gmail.com",
   "link_discord": "https://discord.com/",
-<<<<<<< HEAD:src/user.json
-  "personality" : [
-    {
-    "id": 2,
-    "name": "Bois",
-    "url": "https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg"
-    }
-  ],
-=======
+
   "personality" : {
     "id": 1,
     "url": "url",
     "name": "gentil"
   },
->>>>>>> 022b2db401f730e98646c5a2fb6cecd0ed90eaeb:src/static/user.json
   "competence" : [
     {
       "name": "Mécanique",

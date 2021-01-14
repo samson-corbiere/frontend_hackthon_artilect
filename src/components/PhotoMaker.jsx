@@ -1,5 +1,5 @@
 import React from 'react';
-import "./styles/PhotoMaker.css";
+import "../styles/PhotoMaker.css";
 
 function PhotoMaker ({personality_name, personality_url, photo, user_name}) {
   return (
