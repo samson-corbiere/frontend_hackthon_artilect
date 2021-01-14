@@ -10,11 +10,9 @@ import Machine from "./components/Machine";
 import Profile from "./Pages/Profile"
 import ProjectsList from "./Pages/ProjectsList";
 
-
 function App() {
 
   return (
-
     <Router>
       <div className="main">
         <Chat />
