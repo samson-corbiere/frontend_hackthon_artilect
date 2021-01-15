@@ -61,11 +61,11 @@ const Machine = styled.img`
 `
 const ImgMark = styled.img`
   width: 30px;
-  height: 30px;
-  z-index: 3;
-  left: 35%;
-  position: absolute;
-  margin: 0 0 0 5.8em;
+    height: 30px;
+    z-index: 11;
+    left: 58%;
+    position: absolute;
+    margin: 0 0 0 5.8em;
 `
 const ProjetTitle = styled.h2`
   font-size: 100%;
@@ -85,18 +85,18 @@ const cardSquareUser = ({ photo_maker, title, bookmark }) => {
     <WrapCard>
       <WrapImg>
         {bookmark == "wood" ?
-          (<ImgMark  alt="markerBois" src={wood} />)
+          (<ImgMark alt="markerBois" src={wood} />)
           :
           bookmark == "caoutchouc" ?
-            (<ImgMark  alt="markerBois" src={bonbon} />)
+            (<ImgMark alt="markerBois" src={bonbon} />)
             :
             bookmark == "brick" ?
-              (<ImgMark  alt="markerBois" src={pierre} />)
+              (<ImgMark alt="markerBois" src={pierre} />)
               :
               bookmark == "cotton" ?
-                (<ImgMark  alt="markerBois" src={coton} />)
+                (<ImgMark alt="markerBois" src={coton} />)
                 :
-                <ImgMark  alt="markerBois" src={metal} />
+                <ImgMark alt="markerBois" src={metal} />
         }
 
         <Img src={photo_maker} alt="User" />
