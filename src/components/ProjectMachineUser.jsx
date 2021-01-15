@@ -42,7 +42,7 @@ color: #FFFFF
           </div>
           <div className="container-container-photo-profile">
             <div className="container-photo-profile">
-              <img className="photo-user" src={projectPage.url_photo} alt={projectPage.user_name}/>
+              <img className="photo-user-project" src={projectPage.url_photo} alt={projectPage.user_name}/>
             </div>
             <p>{projectPage.user_name}</p>
           </div>

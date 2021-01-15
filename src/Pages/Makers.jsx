@@ -7,9 +7,9 @@ import axios from "axios";
 
 const CardsContainer = styled.div`
    display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: space-around
+   flex-direction: column;
+   align-items: center;
+   align-content: space-around
 `
 
 function ProjectsList() {
@@ -32,7 +32,7 @@ function ProjectsList() {
     }, [])
 
     return (
-        <div>
+        <div style={{ marginBottom: "40%" }}>
             <PrincipalTitle textTitle={"Les makers"} />
             <CardsContainer>
                 {userData.map(item =>
@@ -41,7 +41,7 @@ function ProjectsList() {
                             <CardSquareUser
                                 photo_maker={item.url_photo}
                                 title={item.user_name}
-                                bookmark={personalityData.map(item => item.url)} />
+                                bookmark={personalityData.map(item => item.name)} />
                         </Link>
 
                     </>
