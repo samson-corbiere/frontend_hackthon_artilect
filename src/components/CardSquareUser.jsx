@@ -12,6 +12,7 @@ const WrapCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-decoration: none
   `
 const WrapItems = styled.div`
   display: flex,

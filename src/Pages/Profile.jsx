@@ -37,7 +37,7 @@ function Profile() {
     else
         return (
             <div style={{ margin: "auto" }}>
-                <div className="container">
+                <div className="container-profile">
                 {personalityData.map(e => 
                     e.id == id ?
                     <PhotoMaker
