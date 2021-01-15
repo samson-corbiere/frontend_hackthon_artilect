@@ -9,12 +9,6 @@ import PhotoMaker from "../components/PhotoMaker";
 import "../styles/projet.css";
 
 function Project() {
-  const Img = styled.img`
-  width: 120%;
-  top: 50%;
-  left: 50%;
-  }
-`;
 
   const { id } = useParams();
 

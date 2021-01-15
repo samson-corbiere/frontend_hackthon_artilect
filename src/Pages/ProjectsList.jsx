@@ -34,6 +34,9 @@ class ProjectsList extends Component {
     this.getProjectList();
   }
 
+  componentDidMount() {
+    this.getProjectList();
+  }
 
     render(){
             
