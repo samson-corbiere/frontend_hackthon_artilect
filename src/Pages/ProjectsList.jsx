@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import CardSquare from '../components/CardSquare';
 import PrincipalTitle from '../components/PrincipalTitle';
-import data from "../static/projet.json";
+//import data from "../static/projet.json";
 import styled from 'styled-components';
+import axios from 'axios';
 
 const CardsContainer = styled.div`
    display: flex;
@@ -11,31 +12,49 @@ const CardsContainer = styled.div`
   align-items: center;
   align-content: space-around
 `
+class ProjectsList extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+          projectListData: [],
+        };
+      }
 
-function ProjectsList() {
-    const [projectData, setProjectData] = useState([])
+    getProjectList() {
+        const url = "http://localhost:5000/api/projects";
+        axios.get(url)
+        .then((response) => response.data)
+        .then((projectListArray) => this.setState({ projectListData: projectListArray }))
+      }
 
-    useEffect(() => {
-        setProjectData(data)
-    }, [])
 
-    return (
-        <div>
-            <PrincipalTitle textTitle={"Les projets"} />
-            <CardsContainer>
-                {projectData.map(e =>
-                    <Link to="/">
-                        <CardSquare
-                            image_project={e.photo_link}
-                            title={e.name}
-                            status={e.status}
-                            photo_machine={e.machine.map(item => item.url_photo)}
-                            name_machine={e.machine.map(item => item.pseudo)} />
-                    </Link>
-                )}
-            </CardsContainer>
-        </div>
-    )
+      componentDidMount() {
+          this.getProjectList() 
+      }
+  
+        render(){
+            
+        const { projectListData } = this.state;
+        console.log("projectListData", projectListData)
+                return (
+                    <div>
+                    <PrincipalTitle textTitle={"Les projets"} />
+                        <CardsContainer>
+                            {projectListData.map(e =>
+                                <Link to={`/projectMachineUser/${e.id}`}>
+                                    <CardSquare
+                                    image_project={e.image}
+                                    title={e.project_name}
+                                    status={e.status}
+                                    photo_machine={e.url_photo}
+                                    name_machine={e.pseudo} />
+                                </Link>
+                            )}
+                        </CardsContainer>
+                </div>
+            );
+        }
 }
+
 
 export default ProjectsList;
