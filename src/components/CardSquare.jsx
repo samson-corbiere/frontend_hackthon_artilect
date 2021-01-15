@@ -1,6 +1,5 @@
 import React from "react";
 import styled from 'styled-components';
-import projectdata from "../static/projet.json";
 
 
 const StatusEnCours = styled.input`
@@ -83,16 +82,16 @@ const WrapImg = styled.div`
   height: 9em;
 `
 
-const CardSquare = ({ image_project, title, status, photo_machine, name_machine }) => {
+const CardSquare = ({ title, status, image_project, name_machine,  photo_machine }) => {
   return (
     <div>
-      {projectdata.map(item =>
       <WrapCard>
         <WrapImg>
-          <Img src={item.photo_link} alt="Image Projet" />
+          <Img src={image_project} alt="Image Projet" />
         </WrapImg>
-        <ProjetTitle>{item.name}</ProjetTitle>
+        <ProjetTitle>{title}</ProjetTitle>
         <WrapItem>
+
         {status === "En cours" ? (
           <StatusEnCours type="button" value={status} /> ) : 
         status === "Terminé" ? (
@@ -104,7 +103,7 @@ const CardSquare = ({ image_project, title, status, photo_machine, name_machine 
           <Machine src={photo_machine} alt={name_machine} />
         </WrapItem>
       </WrapCard>
-       )}
+       
     </div>
   );
 };

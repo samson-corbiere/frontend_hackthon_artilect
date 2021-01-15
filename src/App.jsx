@@ -10,6 +10,8 @@ import Header from "./components/Header";
 import Machine from "./components/Machine";
 import Profile from "./Pages/Profile"
 import ProjectsList from "./Pages/ProjectsList";
+import Project from "./Pages/Project"
+import ProjectMachineUser from "./components/ProjectMachineUser";
 
 
 function App() {
@@ -25,8 +27,10 @@ function App() {
           <Route exact path="/machine/:id" component={Machine}></Route>
           <Route exact path="/projets" component={ProjectsList}></Route>
           <Route exact path="/makers" component={Makers}></Route>
+          <Route exact path="/projet/:id" component={Project}></Route>
           <Route exact path="/direct" component={Direct}></Route>
-          <Route exact path="/profil" component={Profile}></Route>
+          <Route exact path="/profil/:id" component={Profile}></Route>
+          <Route exact path="/projectMachineUser/:id" component={ProjectMachineUser}></Route>
           </Switch>
           <div className="allFooter">
             <div className="navigationFooter">
