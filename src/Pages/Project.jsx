@@ -4,7 +4,7 @@ import PrincipalButton from "../components/PrincipalButton";
 import PrincipalTitle from "../components/PrincipalTitle"
 import styled from 'styled-components';
 import { useParams } from "react-router-dom";
-import PhotoMaker from "../components/photoMachine";
+import PhotoMaker from "../components/PhotoMaker";
 import "../styles/projet.css"
 
 

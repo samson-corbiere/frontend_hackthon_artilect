@@ -3,12 +3,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
   margin: 0 10%;
 }
-=======
-  margin: 10% 0%;
->>>>>>> 6523e8dcf4b694df15732feb808fb5d3a3312935
 
 .photo-user {
   z-index: 1;
