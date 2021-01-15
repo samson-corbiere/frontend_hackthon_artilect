@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10%;
+  margin: 0 10%;
 }
 
 .photo-user {
@@ -14,7 +14,7 @@
   border-radius: 200px;
 }
 
-.wood {
+.matiere {
   position: absolute;
   border-radius: 200px;
   overflow: hidden;

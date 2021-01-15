@@ -3,6 +3,7 @@
       "id":"1",
       "name":"laser (SP500)",
       "pseudo":"Norbert",
+      "intro_sentence":"Je suis Albert LASER-SP100, la (presque) plus laser de toutes les imprimantes laser.",
       "description":"Les découpes laser permettent de découper des plaques de bois, d’acrylique, de carton, mais aussi certains tissus, du cuir, etc… sur des épaisseurs allant jusqu’a 10mm suivant les matériaux.  Il est aussi possible de graver les matériaux précédemment cites ainsi que la pierre, le verre, etc…",
       "url_photo":"https://artilect.fr/wp-content/uploads/doliconnect/product/8/LASER-SP500-Plan%20de%20travail%2079-200x200.png",
       "video_link":"https://youtu.be/tKt2TPgfY2o",
@@ -43,29 +44,29 @@
             {
             "id": 2,
             "name": "Bois"
-            }
-          ],
-          "competence" : [
-            {
-              "name": "Mécanique",
-              "level": "1",
-              "reward":"42"
-            },
-            {
-              "name": "Électronique",
-              "level": "2",
-              "reward":"190"
-            }
-          ]
-        },
-        {
-          "id": 2,
-          "name": "Ethel Wells",
-          "photo": "https://randomuser.me/api/portraits/women/69.jpg",
-          "email": "wells.e@gmail.com",
-          "link_discord": "https://discord.com/",
-          "personality" : [
-            {
+          }
+        ],
+        "competence": [
+          {
+            "name": "Mécanique",
+            "level": "1",
+            "reward": "42"
+          },
+          {
+            "name": "Électronique",
+            "level": "2",
+            "reward": "190"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Ethel Wells",
+        "photo": "https://randomuser.me/api/portraits/women/69.jpg",
+        "email": "wells.e@gmail.com",
+        "link_discord": "https://discord.com/",
+        "personality": [
+          {
             "id": 3,
             "name": "Acier"
             }
@@ -84,6 +85,7 @@
       "id":"2",
       "name":"laser (SP100)",
       "pseudo":"Robert",
+      "intro_sentence":"Je suis Roert LASER-SP500, avec moi la découpe est précise.",
       "description":"Couleur de matériau disponible : blanc, rouge, bleu, noir, vert et jaune Épaisseur de couche minimale : 0.10m Taille d’impression : 220x220x250mm Format d’entrée : STL, GCODE, OBJ Matériau d’impression : PLA",
       "url_photo":"https://artilect.fr/wp-content/uploads/doliconnect/product/183/LASER-SP100-Plan%20de%20travail%2080-200x200.png",
       "video_link":"https://youtu.be/tKt2TPgfY2o",
@@ -116,27 +118,26 @@
             {
             "id": 2,
             "name": "Bois"
-            }
-          ],
-          "competence" : [
-            {
-              "name": "Mécanique",
-              "level": "2",
-              "reward":"122"
-            },
-            {
-              "name": "Électronique",
-              "level": "2",
-              "reward":"190"
-            },
-            {
-              "name": "Programation",
-              "level": "1",
-              "reward":"22"
-            }
-          ]
-        }
-      ]
-    }
-  ]
-  
+          }
+        ],
+        "competence": [
+          {
+            "name": "Mécanique",
+            "level": "2",
+            "reward": "122"
+          },
+          {
+            "name": "Électronique",
+            "level": "2",
+            "reward": "190"
+          },
+          {
+            "name": "Programation",
+            "level": "1",
+            "reward": "22"
+          }
+        ]
+      }
+    ]
+  }
+]
