@@ -49,6 +49,7 @@
     visibility: visible;
     margin-left: 12em;
     margin-top:3em;
+    text-align: center;
 }
 
 .bubble1 {
@@ -62,5 +63,6 @@
   visibility: visible;
   margin-right: 12em;
   margin-top: 3em;
+  text-align: center;
 }
 
