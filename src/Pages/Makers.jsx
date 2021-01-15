@@ -3,6 +3,7 @@ import CardSquareUser from '../components/CardSquareUser';
 import { Link } from "react-router-dom";
 import PrincipalTitle from '../components/PrincipalTitle';
 import data from "../static/user.json";
+import Header from "../components/Header";
 import styled from 'styled-components';
 
 const CardsContainer = styled.div`

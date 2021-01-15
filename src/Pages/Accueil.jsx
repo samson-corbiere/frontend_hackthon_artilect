@@ -1,9 +1,9 @@
-
 import React, {Component} from "react";
 //import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
 //import machine from "../static/machine.json"
 import PhotoMachine from "../components/PhotoMachine"
 import "../styles/Accueil.css";
+import "../styles/Machine.css";
 import axios from "axios";
 
 
@@ -32,13 +32,16 @@ class Accueil extends Component {
         return (
         <div className="background-home">
             {machineData.map(item =>
-                <PhotoMachine
-                  intro={item.intro_sentence}
-                  photo={item.url_photo}
-                  name={item.user_name}
-                />
-          )
-          }
+                <div className="container"> 
+                  <img  src={item.url_photo} className={item.id%2 == 0 ? "machine1" : "machine"} />  
+                  <div className={item.id%2 == 0 ? "bubble1" : "bubble"}>
+                    <p> {item.intro_sentence} </p>
+                  </div>
+                 </div>
+          )}
+        <div className="home">
+          {""}
+        </div>
         </div>
         );
       }
