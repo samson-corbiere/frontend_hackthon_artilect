@@ -9,9 +9,7 @@ import "../styles/projet.css";
 
 function Project() {
   const Img = styled.img`
-  width: 120%;
-  top: 50%;
-  left: 50%;
+  
   }
 `;
 

@@ -6,7 +6,8 @@ import PrincipalTitle from "../components/PrincipalTitle";
 import styled from "styled-components";
 import PrincipalButton from "../components/PrincipalButton";
 import axios from "axios";
-import "../styles/PageMachine.css";
+import "../styles/MachinePage.css";
+import MachineElipse from "../img/machineelipse.png"
 
 function Machine() {
   const Img = styled.img`
@@ -29,14 +30,17 @@ function Machine() {
 
   return (
     <div>
-      <div className="containerr">
+      <div className="container-machine">
         <PrincipalTitle textTitle={machineData.name} />
-        <div className="imgDiv">
-          <Img src={machineData.url_photo} className="machineImg" />
+        <div className="container-machine-profile"></div>
+          <img src={machineData.url_photo} className="photo-machine" />
+          {/* <img src={MachineElipse} className="matiere" /> */}
+        <h2>Description :</h2>
+        <div className="container-description">
+          <p className="description">{machineData.description}</p>
         </div>
-        <p>Description :</p>
-        <div>{machineData.description}</div>
         <PrincipalButton textButton="Comment m'utiliser" />
+        <a href={machineData.notice} target="_blank" >Télécharge mon manuel </a>
         <PrincipalButton textButton="Mes makers" />
         <p>liste des makers</p>
         <PrincipalButton textButton="Mes réalisations" />

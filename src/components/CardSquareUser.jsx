@@ -12,6 +12,7 @@ const WrapCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-decoration: none
   `
 const WrapItems = styled.div`
   display: flex,
@@ -39,7 +40,7 @@ const WrapCompetence = styled.div`
 
 const Img = styled.img`
   width: 110%;
-  z-index:10;
+  z-index:2;
   position: absolute;
   bottom: 5%;
   filter: grayscale(60%);
@@ -51,7 +52,7 @@ const Machine = styled.img`
 const ImgMark = styled.div`
   width: 30px;
   height: 30px;
-  z-index: 11;
+  z-index: 3;
   left: 35%;
   position: absolute;
   margin: 0 0 0 5.8em;
