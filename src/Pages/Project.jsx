@@ -1,21 +1,15 @@
 import React, { useEffect, useState } from "react";
 import userdata from "../static/projet.json";
 import PrincipalButton from "../components/PrincipalButton";
-import PrincipalTitle from "../components/PrincipalTitle"
-import styled from 'styled-components';
+import PrincipalTitle from "../components/PrincipalTitle";
+import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import PhotoMaker from "../components/PhotoMaker";
-import "../styles/projet.css"
 
+import "../styles/projet.css";
 
 function Project() {
-    const Img = styled.img`
-  width: 120%;
-  top: 50%;
-  left: 50%;
 
-  }
-`
     const { id } = useParams()
 
     const [projectData, setProject] = useState([])

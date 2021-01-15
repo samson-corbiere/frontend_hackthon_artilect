@@ -1,31 +1,33 @@
 import React, { useEffect, useState } from "react";
 import PhotoMaker from "../components/PhotoMaker";
 import PrincipalButton from "../components/PrincipalButton";
-import '../styles/Profile.css';
+import "../styles/Profile.css";
 import CardSquare from "../components/CardSquare";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function Profile() {
+  const { id } = useParams();
 
-    const { id } = useParams()
+  const [profileData, setProfile] = useState([]);
+  const [competenceData, setCompetenceData] = useState([]);
+  const [personalityData, setPersonalityData] = useState([]);
 
-    const [profileData, setProfile] = useState([])
-    const [competenceData, setCompetenceData] = useState([])
-    const [personalityData, setPersonalityData] = useState([])
+  useEffect(() => {
+    axios
+      .get(`http://localhost:5000/api/userProjects/${id}`)
+      .then((res) => res.data)
+      .then((data) => setProfile(data));
+  }, []);
 
+  useEffect(() => {
+    axios
+      .get(`http://localhost:5000/api/competences/user/${id}`)
+      .then((res) => res.data)
+      .then((data) => setCompetenceData(data));
+  }, []);
 
-    useEffect(() => {
-        axios.get(`http://localhost:5000/api/userProjects/${id}`)
-            .then(res => res.data)
-            .then(data => setProfile(data))
-    }, [])
-
-    useEffect(() => {
-        axios.get(`http://localhost:5000/api/competences/user/${id}`)
-            .then(res => res.data)
-            .then(data => setCompetenceData(data))
-    }, [])
 
     useEffect(() => {
         axios.get(`http://localhost:5000/api/personalities/user/${id}`)
@@ -80,9 +82,22 @@ function Profile() {
                     <PrincipalButton textButton="Envoyer un e-mail" />
                 </div>
 
+          {profileData.map((item) => (
+            <div className="container-projects-profile">
+              <Link to={`/project/${item.id}`}>
+                <CardSquare
+                  image_project={item.image}
+                  title={item.project_name}
+                  status={item.status}
+                />
+              </Link>
             </div>
+          ))}
+          <PrincipalButton textButton="Contacter sur Discord" />
+          <PrincipalButton textButton="Envoyer un e-mail" />
+        </div>
 
-        )
+);
 }
 
 export default Profile;

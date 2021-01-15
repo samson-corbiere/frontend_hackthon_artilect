@@ -62,8 +62,8 @@ const Machine = styled.img`
 const ImgMark = styled.img`
   width: 30px;
   height: 30px;
-  z-index: 11;
-  left: 59%;
+  z-index: 3;
+  left: 35%;
   position: absolute;
   margin: 0 0 0 5.8em;
 `

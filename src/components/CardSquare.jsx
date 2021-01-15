@@ -16,16 +16,16 @@ const StatusEnCours = styled.input`
   border-radius: 50px;
   border:none;
   color: white;
-  font-size: 60%;
-`
+  font-size: 60%;`
+
 const StatusOk = styled.input`
   width: 6em;
   background: #6ED9BF;
   border-radius: 50px;
   border:none;
   color: white;
-  font-size: 60%;
-`
+  font-size: 60%;`
+
 const StatusKo = styled.input`
   width: 6em;
   background: #D96E6E;
@@ -43,9 +43,9 @@ const WrapCard = styled.div`
   box-shadow: 0px 4px 19px -2px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   margin-bottom: 25px;
-  text-align: center;
+  text-align: center;`
  
-`
+
 const WrapItem = styled.div`
   margin: auto;
   background: #FFFFFF;
@@ -68,8 +68,8 @@ const Img = styled.img`
     width: 170%;
     transition-property: filter width;
     transition-duration: 0.3s;
-  }
-`
+  }`
+
 const Machine = styled.img`
   width: 13%;
 `

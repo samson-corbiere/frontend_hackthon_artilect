@@ -1,39 +1,45 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import CardSquare from '../components/CardSquare';
-import PrincipalTitle from '../components/PrincipalTitle';
+import CardSquare from "../components/CardSquare";
+import PrincipalTitle from "../components/PrincipalTitle";
 //import data from "../static/projet.json";
-import styled from 'styled-components';
-import axios from 'axios';
+import styled from "styled-components";
+import axios from "axios";
 
 const CardsContainer = styled.div`
-   display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   align-content: space-around;
   margin-bottom: 40%
 `
 class ProjectsList extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-          projectListData: [],
-        };
-      }
+  constructor(props) {
+    super(props);
+    this.state = {
+      projectListData: [],
+    };
+  }
 
-    getProjectList() {
-        const url = "http://localhost:5000/api/projects";
-        axios.get(url)
-        .then((response) => response.data)
-        .then((projectListArray) => this.setState({ projectListData: projectListArray }))
-      }
+  getProjectList() {
+    const url = "http://localhost:5000/api/projects";
+    axios
+      .get(url)
+      .then((response) => response.data)
+      .then((projectListArray) =>
+        this.setState({ projectListData: projectListArray })
+      );
+  }
 
+  componentDidMount() {
+    this.getProjectList();
+  }
 
-      componentDidMount() {
-          this.getProjectList() 
-      }
-  
-        render(){
+  componentDidMount() {
+    this.getProjectList();
+  }
+
+    render(){
             
         const { projectListData } = this.state;
         console.log("projectListData", projectListData)
@@ -56,6 +62,5 @@ class ProjectsList extends Component {
             );
         }
 }
-
 
 export default ProjectsList;
