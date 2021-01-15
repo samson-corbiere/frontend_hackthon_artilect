@@ -6,14 +6,9 @@ import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import PhotoMaker from "../components/PhotoMaker";
 
-import "../styles/projet.css"
-
-
-import PhotoMaker from "../components/PhotoMaker";
 import "../styles/projet.css";
 
 function Project() {
-
   const Img = styled.img`
   width: 120%;
   top: 50%;
@@ -31,7 +26,6 @@ function Project() {
 
   return (
     <div style={{ margin: "auto" }}>
-
       {projectData.map((item) =>
         item.id == id ? (
           <div className="container">

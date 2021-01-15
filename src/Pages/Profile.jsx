@@ -39,7 +39,7 @@ function Profile() {
   else
     return (
       <div style={{ margin: "auto" }}>
-        <div className="container">
+        <div className="container-profile">
           {personalityData.map((e) =>
             e.id == id ? (
               <PhotoMaker
@@ -64,7 +64,7 @@ function Profile() {
             )
           )}
           <h2>Mes Projets</h2>
-        
+
           {profileData.map((item) => (
             <div className="container-projects-profile">
               <Link to={`/project/${item.id}`}>

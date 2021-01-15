@@ -48,6 +48,7 @@ function App() {
           </div>
           <div className="chatPlace"></div>
         </div>
+      </div>
     </Router>
   );
 }
