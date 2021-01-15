@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 //import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
 //import machine from "../static/machine.json"
+import { Link } from "react-router-dom";
 import PhotoMachine from "../components/PhotoMachine";
 import "../styles/Accueil.css";
 import "../styles/Machine.css";
@@ -12,7 +13,7 @@ class Accueil extends Component {
     super(props);
     this.state = {
       machineData: [],
-      machineId: 0
+      machineId: 0,
     };
   }
 
@@ -21,8 +22,8 @@ class Accueil extends Component {
     const url = "http://localhost:5000/api/machines";
     axios
       .get(url)
-      .then(response => response.data)
-      .then(machineArray => this.setState({ machineData: machineArray }));
+      .then((response) => response.data)
+      .then((machineArray) => this.setState({ machineData: machineArray }));
   }
 
   componentDidMount() {
@@ -33,16 +34,21 @@ class Accueil extends Component {
     const { machineData } = this.state;
     return (
       <div className="background-home">
-        {machineData.map((item, index) => (
-          <div>
-            <PhotoMachine
-              intro={item.intro_sentence}
-              photo={item.url_photo}
-              name={item.user_name}
-              id={item.id}
+        {machineData.map((item) => (
+          <div className="container">
+            <img
+              src={item.url_photo}
+              className={item.id % 2 == 0 ? "machine1" : "machine"}
             />
+            <Link
+              to={`/machine/${item.id}`}
+              className={item.id % 2 == 0 ? "bubble1" : "bubble"}
+            >
+              <p> {item.intro_sentence} </p>
+            </Link>
           </div>
         ))}
+        <div className="home">{""}</div>
       </div>
     );
   }
