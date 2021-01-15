@@ -1,6 +1,11 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, useParams } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useParams
+} from "react-router-dom";
 import Chat from "./components/Chat";
 import BottomNavigation from "./components/BottomNavigation";
 import Accueil from "./Pages/Accueil";
@@ -8,14 +13,13 @@ import Makers from "./Pages/Makers";
 import Direct from "./components/Direct";
 import Header from "./components/Header";
 import Machine from "./components/Machine";
-import Profile from "./Pages/Profile"
+import Profile from "./Pages/Profile";
 import ProjectsList from "./Pages/ProjectsList";
 import Project from "./Pages/Project"
 import ProjectMachineUser from "./components/ProjectMachineUser";
 
 
 function App() {
-
   return (
     <Router>
       <div className="main">
@@ -40,10 +44,10 @@ function App() {
               <Chat />
             </div>
           </div>
+          <div className="chatPlace"></div>
         </div>
-      </Router>
-  )
+    </Router>
+  );
 }
-
 
 export default App;
