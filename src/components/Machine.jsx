@@ -10,9 +10,7 @@ import "../styles/PageMachine.css";
 
 function Machine() {
   const Img = styled.img`
-  width: 120%;
-  top: 50%;
-  left: 50%;
+  
   }
 `;
 
