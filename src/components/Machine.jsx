@@ -6,6 +6,7 @@ import PrincipalTitle from "../components/PrincipalTitle";
 import styled from "styled-components";
 import PrincipalButton from "../components/PrincipalButton";
 import axios from "axios";
+import "../styles/PageMachine.css";
 
 function Machine() {
   const Img = styled.img`
@@ -16,7 +17,7 @@ function Machine() {
 `;
 
   let { id } = useParams();
-  console.log("id ===> " +id)
+  console.log("id ===> " + id);
   const [machineData, setMachine] = useState([]);
 
   useEffect(() => {
@@ -30,13 +31,18 @@ function Machine() {
 
   return (
     <div>
-      <div className="container">
+      <div className="containerr">
         <PrincipalTitle textTitle={machineData.name} />
-        <Img src={machineData.url_photo} />
+        <div className="imgDiv">
+          <Img src={machineData.url_photo} className="machineImg" />
+        </div>
+        <p>Description :</p>
         <div>{machineData.description}</div>
         <PrincipalButton textButton="Comment m'utiliser" />
         <PrincipalButton textButton="Mes makers" />
+        <p>liste des makers</p>
         <PrincipalButton textButton="Mes réalisations" />
+        <p>liste des projets</p>
       </div>
     </div>
   );
