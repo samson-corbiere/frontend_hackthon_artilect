@@ -16,7 +16,7 @@ class ProjectsList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      projectListData: []
+      projectListData: [],
     };
   }
 
@@ -24,8 +24,8 @@ class ProjectsList extends Component {
     const url = "http://localhost:5000/api/projects";
     axios
       .get(url)
-      .then(response => response.data)
-      .then(projectListArray =>
+      .then((response) => response.data)
+      .then((projectListArray) =>
         this.setState({ projectListData: projectListArray })
       );
   }
@@ -38,11 +38,7 @@ class ProjectsList extends Component {
     this.getProjectList();
   }
 
-      componentDidMount() {
-          this.getProjectList() 
-      }
-  
-        render(){
+    render(){
             
         const { projectListData } = this.state;
         console.log("projectListData", projectListData)
