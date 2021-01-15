@@ -7,9 +7,9 @@ import axios from "axios";
 
 const CardsContainer = styled.div`
    display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-content: space-around
+   flex-direction: column;
+   align-items: center;
+   align-content: space-around
 `
 
 function ProjectsList() {
