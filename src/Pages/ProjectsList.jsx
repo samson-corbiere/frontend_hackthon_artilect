@@ -27,6 +27,7 @@ class ProjectsList extends Component {
         .then((projectListArray) => this.setState({ projectListData: projectListArray }))
       }
 
+
       componentDidMount() {
           this.getProjectList() 
       }

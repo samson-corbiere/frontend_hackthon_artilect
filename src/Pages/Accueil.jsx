@@ -1,4 +1,3 @@
-
 import React, {Component} from "react";
 //import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
 //import machine from "../static/machine.json"

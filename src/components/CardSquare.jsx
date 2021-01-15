@@ -91,6 +91,7 @@ const CardSquare = ({ title, status, image_project, name_machine,  photo_machine
         </WrapImg>
         <ProjetTitle>{title}</ProjetTitle>
         <WrapItem>
+
         {status === "En cours" ? (
           <StatusEnCours type="button" value={status} /> ) : 
         status === "Terminé" ? (
