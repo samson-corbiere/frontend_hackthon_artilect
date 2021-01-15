@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   margin: 10% 0%;
+}
 
 .photo-user {
   z-index: 1;
@@ -19,5 +20,5 @@
   border-radius: 200px;
   overflow: hidden;
   width: 200px;
-  height: 200px
+  height: 200px;
 }

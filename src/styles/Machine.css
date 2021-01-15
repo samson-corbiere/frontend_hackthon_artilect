@@ -9,11 +9,11 @@
   justify-content: center;
   align-items: center;
   padding: 1.4em;
-  height:5em;
+  height: 5em;
 }
 
 .machine1 {
-  margin-top:18em;
+  margin-top: 18em;
   position: absolute;
   border-radius: 200px;
   width: 5.5em;
@@ -22,7 +22,7 @@
 }
 
 .machine {
-  margin-top:18em;
+  margin-top: 18em;
   position: absolute;
   border-radius: 200px;
   width: 5.5em;
@@ -39,30 +39,33 @@
 }
 
 .bubble {
-    display:none;
-    background-color: rgba(228, 224, 217, 0.80);
-    padding: 0.7em 0.9em;
-    width:40%;
-    border-radius: 2rem;
-    filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
-    box-shadow:	0 0.125rem 0..5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
-    visibility: visible;
-    margin-left: 12em;
-    margin-top:3em;
-    text-align: center;
+  display: none;
+  background-color: rgba(228, 224, 217, 0.8);
+  padding: 0.7em 0.9em;
+  width: 40%;
+  border-radius: 2rem;
+  filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3),
+    0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
+  visibility: visible;
+  margin-left: 12em;
+  margin-top: 3em;
+  text-align: center;
+  text-decoration: none;
 }
 
 .bubble1 {
-  display:none;
+  display: none;
   background-color: rgba(255, 242, 221, 0.54);
   padding: 0.7em 0.9em;
-  width:40%;
+  width: 40%;
   border-radius: 2rem;
-  filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, .1));
-  box-shadow:	0 0.125rem 0..5rem rgba(0, 0, 0, 0.3), 0 0.0625rem 0.125rem rgba(0, 0, 0, .2);
+  filter: drop-shadow(0 -0.0625rem 0.0625rem rgba(0, 0, 0, 0.1));
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3),
+    0 0.0625rem 0.125rem rgba(0, 0, 0, 0.2);
   visibility: visible;
   margin-right: 12em;
   margin-top: 3em;
   text-align: center;
+  text-decoration: none;
 }
-
