@@ -12,9 +12,9 @@ function Project() {
   width: 120%;
   top: 50%;
   left: 50%;
-
   }
 `;
+
   const { id } = useParams();
   console.log("id ==> " +id)
 

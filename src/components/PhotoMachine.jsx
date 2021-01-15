@@ -10,7 +10,7 @@ function PhotoMachine({ photo, intro, name, id }) {
   const pathWithId = "/machine/"+id
   return (
     <div className="container">
-      <Link to={pathWithId}>
+      <Link to={`/machine/${id}`}>
         <img src={photo} alt={name} className="photo-machine"/>  
       </Link>;
     </div>
