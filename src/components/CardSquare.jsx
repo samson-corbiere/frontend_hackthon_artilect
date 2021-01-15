@@ -1,14 +1,35 @@
 import React from "react";
 import styled from 'styled-components';
-import projectdata from "../static/projet.json";
 
 
-const Status = styled.input`
+const StatusEnCours = styled.input`
   width: 6em;
   height: 1.4em;
   left: 48px;
   top: 288px;
   background: #F6D398;
+  border-radius: 50px;
+  border:none;
+  color: white;
+  font-size: 60%;
+`
+const StatusOk = styled.input`
+  width: 6em;
+  height: 1.4em;
+  left: 48px;
+  top: 288px;
+  background: #6ED9BF;
+  border-radius: 50px;
+  border:none;
+  color: white;
+  font-size: 60%;
+`
+const StatusKo = styled.input`
+  width: 6em;
+  height: 1.4em;
+  left: 48px;
+  top: 288px;
+  background: #D96E6E;
   border-radius: 50px;
   border:none;
   color: white;
@@ -61,20 +82,28 @@ const WrapImg = styled.div`
   height: 9em;
 `
 
-const CardSquare = ({ image_project, title, status, photo_machine, name_machine }) => {
+const CardSquare = ({ title, status, image_project, name_machine,  photo_machine }) => {
   return (
     <div>
-  
       <WrapCard>
         <WrapImg>
           <Img src={image_project} alt="Image Projet" />
         </WrapImg>
         <ProjetTitle>{title}</ProjetTitle>
         <WrapItem>
-          <Status type="button" value={status} />
+
+        {status === "En cours" ? (
+          <StatusEnCours type="button" value={status} /> ) : 
+        status === "Terminé" ? (
+          <StatusOk type="button" value={status} />
+        ) :
+        (
+          <StatusKo type="button" value={status} />
+        )}
           <Machine src={photo_machine} alt={name_machine} />
         </WrapItem>
       </WrapCard>
+       
     </div>
   );
 };

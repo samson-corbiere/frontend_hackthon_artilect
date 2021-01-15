@@ -1,13 +1,12 @@
 import React from 'react';
-import "../styles/PhotoMaker.css";
 
-function PhotoMaker ({photo, description, name}) {
+function PhotoMachine ({photo, intro, name}) {
   return (
     <div className='container'>
       <img src={photo} alt={name} className="photo-machine" />
-      <div>{description}</div>
+      <div>{intro}</div>
     </div>
   );
 }
 
-export default PhotoMaker;
+export default PhotoMachine;
