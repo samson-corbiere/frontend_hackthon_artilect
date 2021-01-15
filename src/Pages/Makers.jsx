@@ -41,7 +41,7 @@ function ProjectsList() {
                             <CardSquareUser
                                 photo_maker={item.url_photo}
                                 title={item.user_name}
-                                bookmark={personalityData.map(item => item.url)} />
+                                bookmark={personalityData.map(item => item.name)} />
                         </Link>
 
                     </>

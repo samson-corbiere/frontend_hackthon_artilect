@@ -12,9 +12,6 @@ function blinkingEffect() {
 
 const StatusEnCours = styled.input`
   width: 6em;
-  height: 1.4em;
-  left: 48px;
-  top: 288px;
   background: #F6D398;
   border-radius: 50px;
   border:none;
@@ -23,9 +20,6 @@ const StatusEnCours = styled.input`
 `
 const StatusOk = styled.input`
   width: 6em;
-  height: 1.4em;
-  left: 48px;
-  top: 288px;
   background: #6ED9BF;
   border-radius: 50px;
   border:none;
@@ -34,9 +28,6 @@ const StatusOk = styled.input`
 `
 const StatusKo = styled.input`
   width: 6em;
-  height: 1.4em;
-  left: 48px;
-  top: 288px;
   background: #D96E6E;
   border-radius: 50px;
   border:none;
@@ -47,7 +38,6 @@ const StatusKo = styled.input`
 
 const WrapCard = styled.div`
   width: 20em;
-  height: 14em;
   margin: auto;
   background: #FFFFFF;
   box-shadow: 0px 4px 19px -2px rgba(0, 0, 0, 0.25);
@@ -63,6 +53,8 @@ const WrapItem = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  align-items: center;
+    padding-bottom: 5%;
 `
 const Img = styled.img`
   position: absolute;
@@ -79,7 +71,7 @@ const Img = styled.img`
   }
 `
 const Machine = styled.img`
-  width: 1.5em;
+  width: 13%;
 `
 const ProjetTitle = styled.h2`
   font-size: 100%;

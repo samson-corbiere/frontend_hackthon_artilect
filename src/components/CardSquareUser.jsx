@@ -1,10 +1,16 @@
 import React from "react";
 import styled from 'styled-components';
-import '../styles/card_square.css'
+import '../styles/card_square.css';
+import axios from "axios";
+import bonbon from "../img/markbonbons.png"
+import wood from "../img/markbois.png"
+import coton from "../img/markcoton.png"
+import metal from "../img/markmetal.png"
+import pierre from "../img/markpierre.png"
+
 
 const WrapCard = styled.div`
   width: 20em;
-  height: 14em;
   margin: 5% auto;
   background: #FFFFFF;
   box-shadow: 0px 4px 19px -2px rgba(0, 0, 0, 0.25);
@@ -25,6 +31,7 @@ const WrapMachine = styled.div`
   border-radius: 10px;
   display: flex;
   align-items: center;
+  justify-content: center;
 `
 const WrapLevel = styled.div`
   width: 2em;
@@ -48,14 +55,15 @@ const Img = styled.img`
   
 `
 const Machine = styled.img`
-  width: 1.5em;
+    width: 12%;
+    padding-bottom: 5%;
+    padding-top: 2%;
 `
-const ImgMark = styled.div`
+const ImgMark = styled.img`
   width: 30px;
   height: 30px;
   z-index: 11;
   left: 59%;
-  top: 7%;
   position: absolute;
   margin: 0 0 0 5.8em;
 `
@@ -71,10 +79,26 @@ const WrapImg = styled.div`
 `
 
 const cardSquareUser = ({ photo_maker, title, bookmark }) => {
+
+
   return (
     <WrapCard>
       <WrapImg>
-        <ImgMark className="hex" alt="markerBois" style={{ backgroundImage: `${bookmark}` }} />
+        {bookmark == "wood" ?
+          (<ImgMark  alt="markerBois" src={wood} />)
+          :
+          bookmark == "caoutchouc" ?
+            (<ImgMark  alt="markerBois" src={bonbon} />)
+            :
+            bookmark == "brick" ?
+              (<ImgMark  alt="markerBois" src={pierre} />)
+              :
+              bookmark == "cotton" ?
+                (<ImgMark  alt="markerBois" src={coton} />)
+                :
+                <ImgMark  alt="markerBois" src={metal} />
+        }
+
         <Img src={photo_maker} alt="User" />
       </WrapImg>
       <ProjetTitle>{title}</ProjetTitle>
