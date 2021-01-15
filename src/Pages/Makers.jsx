@@ -18,6 +18,8 @@ function ProjectsList() {
 
     const {id} = useParams()
 
+    console.log(personalityData)
+
 
     useEffect(() => {
         axios.get(`http://localhost:5000/api/personalities/user/${id}`)
