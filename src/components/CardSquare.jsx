@@ -1,6 +1,5 @@
 import React from "react";
 import styled from 'styled-components';
-import projectdata from "../static/projet.json";
 
 
 const StatusEnCours = styled.input`

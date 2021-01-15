@@ -9,6 +9,7 @@ import Direct from "./components/Direct";
 import Machine from "./components/Machine";
 import Profile from "./Pages/Profile"
 import ProjectsList from "./Pages/ProjectsList";
+import ProjectMachineUser from "./components/ProjectMachineUser";
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
           <Route exact path="/makers" component={Makers}></Route>
           <Route exact path="/direct" component={Direct}></Route>
           <Route exact path="/profil" component={Profile}></Route>
+          <Route exact path="/projectMachineUser/:id" component={ProjectMachineUser}></Route>
           </Switch>
           <div className="allFooter">
             <div className="navigationFooter">

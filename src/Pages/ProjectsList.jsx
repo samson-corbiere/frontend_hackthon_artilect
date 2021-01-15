@@ -40,7 +40,7 @@ class ProjectsList extends Component {
                     <PrincipalTitle textTitle={"Les projets"} />
                         <CardsContainer>
                             {projectListData.map(e =>
-                                <Link to="/">
+                                <Link to={`/projectMachineUser/${e.id}`}>
                                     <CardSquare
                                     image_project={e.image}
                                     title={e.project_name}
