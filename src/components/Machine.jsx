@@ -14,7 +14,9 @@ function Machine() {
   left: 50%;
   }
 `;
-  const { id } = useParams();
+
+  let { id } = useParams();
+  console.log("id ===> " +id)
   const [machineData, setMachine] = useState([]);
 
   useEffect(() => {
@@ -22,7 +24,7 @@ function Machine() {
     const url = `http://localhost:5000/api/machines/${id}`;
     axios
       .get(url)
-      .then(response => console.log("response.data ==> " +response.data))
+      .then(response => response.data[0])
       .then(machineArray => setMachine(machineArray));
   }, []);
 

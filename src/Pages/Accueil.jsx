@@ -1,7 +1,7 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 //import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
 //import machine from "../static/machine.json"
-import PhotoMachine from "../components/PhotoMachine"
+import PhotoMachine from "../components/PhotoMachine";
 import "../styles/Accueil.css";
 import "../styles/Machine.css";
 import axios from "axios";
