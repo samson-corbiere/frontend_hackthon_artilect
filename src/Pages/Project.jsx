@@ -9,8 +9,12 @@ import PhotoMaker from "../components/PhotoMaker";
 import "../styles/projet.css"
 
 
+import PhotoMaker from "../components/PhotoMaker";
+import "../styles/projet.css";
+
 function Project() {
-    const Img = styled.img`
+
+  const Img = styled.img`
   width: 120%;
   top: 50%;
   left: 50%;
@@ -18,7 +22,6 @@ function Project() {
 `;
 
   const { id } = useParams();
-  console.log("id ==> " +id)
 
   const [projectData, setProject] = useState([]);
 
@@ -28,14 +31,15 @@ function Project() {
 
   return (
     <div style={{ margin: "auto" }}>
-      {projectData.map(item =>
+
+      {projectData.map((item) =>
         item.id == id ? (
           <div className="container">
             <PrincipalTitle textTitle={item.name} />
             <Img src={item.photo_link} />
             <div className="name-project">
-              <PhotoMaker photo={item.user.map(e => e.photo)} />
-              <h2 className="name">{item.user.map(e => e.name)}</h2>
+              <PhotoMaker photo={item.user.map((e) => e.photo)} />
+              <h2 className="name">{item.user.map((e) => e.name)}</h2>
             </div>
             <div>{item.description}</div>
             <PrincipalButton textButton="Contacter sur Discord" />
