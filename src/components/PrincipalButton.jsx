@@ -1,6 +1,7 @@
 import React from "react";
 import styled from 'styled-components'
 
+
 function PrincipalButon({ textButton }) {
   const PrincipalButton = styled.button`
     width: 55%;
@@ -15,7 +16,8 @@ function PrincipalButon({ textButton }) {
    color: #FFFFFF;
   `;
   return (
-    <PrincipalButton>{textButton}</PrincipalButton>
+      <PrincipalButton>{textButton}</PrincipalButton>
+
   );
 }
 

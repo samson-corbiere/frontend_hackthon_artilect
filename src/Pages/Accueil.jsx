@@ -1,13 +1,9 @@
-import React, { Component, useEffect, useState } from "react";
-import {
-  BrowserRouter as Router,
-  NavLink,
-  Route,
-  Link
-} from "react-router-dom";
-import machine from "../static/machine.json";
-import PhotoMachine from "../components/PhotoMachine";
+import React, {Component} from "react";
+//import { BrowserRouter as Router, NavLink, Route } from "react-router-dom";
+//import machine from "../static/machine.json"
+import PhotoMachine from "../components/PhotoMachine"
 import "../styles/Accueil.css";
+import "../styles/Machine.css";
 import axios from "axios";
 import Project from "./Project.jsx";
 

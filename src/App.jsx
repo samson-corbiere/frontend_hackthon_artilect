@@ -11,15 +11,19 @@ import BottomNavigation from "./components/BottomNavigation";
 import Accueil from "./Pages/Accueil";
 import Makers from "./Pages/Makers";
 import Direct from "./components/Direct";
+import Header from "./components/Header";
 import Machine from "./components/Machine";
 import Profile from "./Pages/Profile";
 import ProjectsList from "./Pages/ProjectsList";
 import Project from "./Pages/Project"
+import ProjectMachineUser from "./components/ProjectMachineUser";
+
 
 function App() {
   return (
     <Router>
       <div className="main">
+        <Header />
         <Switch>
           <Route exact path="/"> 
             <Accueil />
@@ -30,6 +34,7 @@ function App() {
           <Route exact path="/projet/:id" component={Project}></Route>
           <Route exact path="/direct" component={Direct}></Route>
           <Route exact path="/profil/:id" component={Profile}></Route>
+          <Route exact path="/projectMachineUser/:id" component={ProjectMachineUser}></Route>
           </Switch>
           <div className="allFooter">
             <div className="navigationFooter">

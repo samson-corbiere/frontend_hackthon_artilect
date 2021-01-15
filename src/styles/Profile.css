@@ -45,3 +45,9 @@ text-align: center;
 .photo-profile {
   margin-top: 50px
 }
+
+/* .container-projects-profile{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+} */
