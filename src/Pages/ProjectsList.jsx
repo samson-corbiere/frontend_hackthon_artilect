@@ -10,7 +10,8 @@ const CardsContainer = styled.div`
    display: flex;
   flex-direction: column;
   align-items: center;
-  align-content: space-around
+  align-content: space-around;
+  margin-bottom: 40%
 `
 class ProjectsList extends Component {
     constructor(props) {

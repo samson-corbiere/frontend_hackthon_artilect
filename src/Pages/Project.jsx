@@ -28,7 +28,7 @@ function Project() {
         <div style={{ margin: "auto" }}>
             {projectData.map(item =>
                 item.id == id ?
-                    <div className="container">
+                    <div className="container-project">
                         <PrincipalTitle textTitle={item.name} />
                         <Img src={item.photo_link} />
                         <div className="name-project">

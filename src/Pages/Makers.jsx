@@ -32,7 +32,7 @@ function ProjectsList() {
     }, [])
 
     return (
-        <div>
+        <div style={{ marginBottom: "40%" }}>
             <PrincipalTitle textTitle={"Les makers"} />
             <CardsContainer>
                 {userData.map(item =>
