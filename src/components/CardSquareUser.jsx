@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
+import '../styles/card_square.css'
 
 const WrapCard = styled.div`
   width: 13em;
@@ -69,7 +70,7 @@ const cardSquareUser = ({photo_maker, title, bookmark}) => {
   return (
     <WrapCard>
           <WrapImg>
-            <ImgMark alt="markerBois" style={{backgroundImage:`${bookmark}`}}/>
+            <ImgMark className="hex" alt="markerBois" style={{backgroundImage:`${bookmark}`}}/>
             <Img src={photo_maker} alt="User" />
           </WrapImg>
           <ProjetTitle>{title}</ProjetTitle>
