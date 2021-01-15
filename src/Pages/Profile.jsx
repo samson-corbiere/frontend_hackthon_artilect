@@ -69,13 +69,14 @@ function Profile() {
                                 <CardSquare image_project={item.image}
                                     title={item.project_name}
                                     status={item.status}
+                                    photo_machine={item.machine_photo}
                                 />
 
                             </div>
                         )
                     }
 
-                    < PrincipalButton textButton="Contacter sur Discord" />
+                    <PrincipalButton textButton="Contacter sur Discord" />
                     <PrincipalButton textButton="Envoyer un e-mail" />
                 </div>
 
