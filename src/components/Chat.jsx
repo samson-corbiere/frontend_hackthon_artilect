@@ -110,14 +110,14 @@ class Chat extends React.Component {
     */
 
     return (
+    
       <div className="application">
         {/* {console.log("CHAT return this.props.opened => " + this.props.opened)}
           {console.log("CHAT return this.props.id => " + this.props.botId)} */}
         <ChatBot
           // mute possible par le user
-          //   headerTitle="Speech Synthesis"
-          //   speechSynthesis={{ enable: true, lang: 'fr' }}
-
+            // headerTitle="Speech Synthesis"
+            // speechSynthesis={{ enable: true, lang: 'fr' }}
           steps={[
             {
               id: "1",
