@@ -73,7 +73,6 @@ const CardSquare = ({ image_project, title, status, photo_machine, name_machine 
         <WrapItem>
           <Status type="button" value={status} />
           <Machine src={photo_machine} alt={name_machine} />
-          
         </WrapItem>
       </WrapCard>
     </div>

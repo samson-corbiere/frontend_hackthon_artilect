@@ -1,9 +1,5 @@
 import React from "react";
 import styled from 'styled-components';
-import data from "../static/projet.json";
-import markbois from "../img/markbois.png";
-import user from "../img/user1.jpeg";
-import imgCompetence from "./imgCompetence";
 
 const WrapCard = styled.div`
   width: 13em;
@@ -50,8 +46,9 @@ const Img = styled.img`
 const Machine = styled.img`
   width: 1.5em;
 `
-const ImgMark = styled.img`
-  width: 1.8em;
+const ImgMark = styled.div`
+  width: 30px;
+  height: 30px;
   z-index: 11;
   left: 35%;
   position: absolute;
@@ -68,11 +65,11 @@ width: 13em;
 height: 9em;
 `
 
-const cardSquareUser = ({photo_maker, title}) => {
+const cardSquareUser = ({photo_maker, title, bookmark}) => {
   return (
     <WrapCard>
           <WrapImg>
-            <ImgMark src={markbois} alt="markerBois" />
+            <ImgMark alt="markerBois" style={{backgroundImage:`${bookmark}`}}/>
             <Img src={photo_maker} alt="User" />
           </WrapImg>
           <ProjetTitle>{title}</ProjetTitle>

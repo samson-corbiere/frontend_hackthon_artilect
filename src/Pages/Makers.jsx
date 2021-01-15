@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CardSquareUser from '../components/CardSquareUser';
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import PrincipalTitle from '../components/PrincipalTitle';
 import styled from 'styled-components';
 import axios from "axios";
@@ -14,6 +14,16 @@ const CardsContainer = styled.div`
 
 function ProjectsList() {
     const [userData, setUserData] = useState([])
+    const [personalityData, setPersonalityData] = useState([])
+
+    const {id} = useParams()
+
+
+    useEffect(() => {
+        axios.get(`http://localhost:5000/api/personalities/user/${id}`)
+            .then(res => res.data)
+            .then(data => setPersonalityData(data))
+    }, [])
 
     useEffect(() => {
         axios.get('http://localhost:5000/api/userProjects')
@@ -30,7 +40,8 @@ function ProjectsList() {
                         <Link to={`/profil/${item.id}`}>
                             <CardSquareUser
                                 photo_maker={item.url_photo}
-                                title={item.user_name} />
+                                title={item.user_name}
+                                bookmark={personalityData.map(item => item.url)} />
                         </Link>
 
                     </>
