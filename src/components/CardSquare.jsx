@@ -1,6 +1,14 @@
 import React from "react";
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components'
 
+
+function blinkingEffect() {
+  return keyframes`
+    50% {
+      opacity: 0;
+    }
+  `;
+}
 
 const StatusEnCours = styled.input`
   width: 6em;
@@ -34,10 +42,11 @@ const StatusKo = styled.input`
   border:none;
   color: white;
   font-size: 60%;
+  animation: ${blinkingEffect} 1s linear infinite;
 `
 
 const WrapCard = styled.div`
-  width: 13em;
+  width: 20em;
   height: 14em;
   margin: auto;
   background: #FFFFFF;
@@ -73,16 +82,16 @@ const Machine = styled.img`
   width: 1.5em;
 `
 const ProjetTitle = styled.h2`
-  font-size: 65%;
+  font-size: 100%;
 `
 const WrapImg = styled.div`
   position: relative;
   overflow: hidden;
-  width: 13em;
+  width: 20em;
   height: 9em;
 `
 
-const CardSquare = ({ title, status, image_project, name_machine,  photo_machine }) => {
+const CardSquare = ({ title, status, image_project, name_machine, photo_machine }) => {
   return (
     <div>
       <WrapCard>
@@ -92,18 +101,18 @@ const CardSquare = ({ title, status, image_project, name_machine,  photo_machine
         <ProjetTitle>{title}</ProjetTitle>
         <WrapItem>
 
-        {status === "En cours" ? (
-          <StatusEnCours type="button" value={status} /> ) : 
-        status === "Terminé" ? (
-          <StatusOk type="button" value={status} />
-        ) :
-        (
-          <StatusKo type="button" value={status} />
-        )}
+          {status === "En cours" ? (
+            <StatusEnCours className="button-project" type="button" value={status} />) :
+            status === "Terminé" ? (
+              <StatusOk className="button-project" type="button" value={status} />
+            ) :
+              (
+                <StatusKo className="button-project" type="button" value={status} />
+              )}
           <Machine src={photo_machine} alt={name_machine} />
         </WrapItem>
       </WrapCard>
-       
+
     </div>
   );
 };
