@@ -4,6 +4,7 @@ import {useParams} from "react-router-dom";
 import axios from "axios";
 import PrincipalButton from "./PrincipalButton";
 import styled from 'styled-components'
+import "../styles/ProjectMachineUser.css"
 
 
 
@@ -35,17 +36,26 @@ color: #FFFFF
 
         return (
         <div>
-          <h1>{projectPage.project_name}</h1>
-          <img src={projectPage.image} alt={projectPage.project_name} style={{width:"375px"}}/>
-          <img src={projectPage.url_photo} alt={projectPage.user_name} style={{width:"375px"}}/>
-          <p>{projectPage.user_name}</p>
-          <p>{projectPage.description}</p>
-          <a href={projectPage.project_discord_link}>
-            <PrincipalButton>Lien discord</PrincipalButton>
-          </a>   
-          <a href={projectPage.email}>
-            <PrincipalButton>Adresse e-mail</PrincipalButton>
-          </a>  
+          <h1 className="title">{projectPage.project_name}</h1>
+          <div className="divPhotoProject">
+            <img className="photoProject" src={projectPage.image} alt={projectPage.project_name} style={{width:"80%"}}/>
+          </div>
+          <div className="container-container-photo-profile">
+            <div className="container-photo-profile">
+              <img className="photo-user" src={projectPage.url_photo} alt={projectPage.user_name}/>
+            </div>
+            <p>{projectPage.user_name}</p>
+          </div>
+          <p className="descriptionClass">description :</p>
+          <p className="descriptionProject">{projectPage.description}</p>
+          <div className="centerbutton">
+            <a href={projectPage.project_discord_link}>
+              <button className="buttonProject">Lien discord</button>
+            </a>   
+            <a href={projectPage.email}>
+              <button className="buttonProject">Adresse e-mail</button>
+            </a>  
+          </div>
         </div>
         );
 }

@@ -1,0 +1,79 @@
+.photoProject {
+  width: "355px";
+}
+
+.title {
+  left: 41px;
+  top: 79px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  text-align: center;
+  color: #659DB8;
+}
+
+.divPhotoProject {
+  display: flex;
+  justify-content: center
+}
+
+.container-photo-profile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10% 0%;
+}
+
+.photo-user {
+  z-index: 1;
+  height: 80px;
+  width: 80px;
+  border: 2px solid white;
+  box-sizing: border-box;
+  border-radius: 200px;
+}
+
+.buttonProject {
+  width: 150px;
+  height: 29px;
+  border: none;
+  background: #659DB8;
+  border-radius: 10px;
+  margin: 4%;
+  font-size: 14px;  
+  font-family: Roboto;
+  font-weight: 600;
+  color: #FFFFFF
+}
+
+.descriptionProject {
+  text-align: justify;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.centerbutton {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.descriptionClass {
+  margin-left: 10%;
+}
+
+.container-container-photo-profile {
+  display: flex;
+  margin-left: 10%;
+  margin-right: 10%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main {
+  margin-bottom: 25%;
+}
