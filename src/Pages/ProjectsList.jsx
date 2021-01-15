@@ -16,7 +16,7 @@ class ProjectsList extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      projectListData: []
+      projectListData: [],
     };
   }
 
@@ -24,8 +24,8 @@ class ProjectsList extends Component {
     const url = "http://localhost:5000/api/projects";
     axios
       .get(url)
-      .then(response => response.data)
-      .then(projectListArray =>
+      .then((response) => response.data)
+      .then((projectListArray) =>
         this.setState({ projectListData: projectListArray })
       );
   }
@@ -41,7 +41,7 @@ class ProjectsList extends Component {
       <div>
         <PrincipalTitle textTitle={"Les projets"} />
         <CardsContainer>
-          {projectListData.map(e => (
+          {projectListData.map((e) => (
             <Link to={`/projectMachineUser/${e.id}`}>
               <CardSquare
                 image_project={e.image}
