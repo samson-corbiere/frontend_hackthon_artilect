@@ -7,11 +7,14 @@ align-items: center;
 text-align: center;
 }
 
-.container {
+.container-profile {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 10% 0%;
+  margin-bottom: 40%;
+
 }
 
 .container-competence {
@@ -41,3 +44,13 @@ text-align: center;
   line-height: 11px;
   color: #659DB8;
 }
+
+.photo-profile {
+  margin-top: 50px
+}
+
+/* .container-projects-profile{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+} */
