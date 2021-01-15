@@ -34,28 +34,29 @@ class ProjectsList extends Component {
     this.getProjectList();
   }
 
-  render() {
-    const { projectListData } = this.state;
-    console.log("projectListData", projectListData);
-    return (
-      <div>
-        <PrincipalTitle textTitle={"Les projets"} />
-        <CardsContainer>
-          {projectListData.map((e) => (
-            <Link to={`/projectMachineUser/${e.id}`}>
-              <CardSquare
-                image_project={e.image}
-                title={e.project_name}
-                status={e.status}
-                photo_machine={e.url_photo}
-                name_machine={e.pseudo}
-              />
-            </Link>
-          ))}
-        </CardsContainer>
-      </div>
-    );
-  }
+
+    render(){
+            
+        const { projectListData } = this.state;
+        console.log("projectListData", projectListData)
+                return (
+                    <div>
+                    <PrincipalTitle textTitle={"Les projets"} />
+                        <CardsContainer>
+                            {projectListData.map(e =>
+                                <Link to={`/projectMachineUser/${e.id}`}  style={{ textDecoration: "none" }}>
+                                    <CardSquare
+                                    image_project={e.image}
+                                    title={e.project_name}
+                                    status={e.status}
+                                    photo_machine={e.url_photo}
+                                    name_machine={e.pseudo} />
+                                </Link>
+                            )}
+                        </CardsContainer>
+                </div>
+            );
+        }
 }
 
 export default ProjectsList;

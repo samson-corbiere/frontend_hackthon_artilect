@@ -46,9 +46,8 @@ function App() {
           <div className="chatPlace">
             <Chat />
           </div>
+          <div className="chatPlace"></div>
         </div>
-        <div className="chatPlace"></div>
-      </div>
     </Router>
   );
 }

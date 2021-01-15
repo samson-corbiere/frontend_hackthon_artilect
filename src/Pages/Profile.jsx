@@ -64,7 +64,7 @@ function Profile() {
             )
           )}
           <h2>Mes Projets</h2>
-
+        
           {profileData.map((item) => (
             <div className="container-projects-profile">
               <Link to={`/project/${item.id}`}>

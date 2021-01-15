@@ -21,12 +21,12 @@ function Machine() {
   const [machineData, setMachine] = useState([]);
 
   useEffect(() => {
-    console.log("coucou 2");
     const url = `http://localhost:5000/api/machine/${id}`;
     axios
       .get(url)
       .then((response) => response.data[0])
       .then((machineArray) => setMachine(machineArray));
+
   }, []);
 
   return (
