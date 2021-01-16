@@ -3,6 +3,7 @@
   padding-left: 5%;
   position: fixed;
   bottom: 4.5%;
+  z-index: 10;
 }
 
 @keyframes App-logo-spin {

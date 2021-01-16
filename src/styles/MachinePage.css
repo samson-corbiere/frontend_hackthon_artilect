@@ -1,0 +1,87 @@
+.container-machine {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10% 0%;
+  margin-bottom: 40%;
+}
+
+.container-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: auto;
+}
+
+.description {
+  margin: 10% 2%;
+}
+
+.container-machine-profile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10% 0%;
+}
+
+.photo-machine {
+  z-index: 1;
+  height: 150px;
+  width: 150px;
+  border: 2px solid white;
+  box-sizing: border-box;
+  border-radius: 200px;
+}
+
+.matiere {
+  position: absolute;
+  border-radius: 200px;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+}
+
+/* .name {
+  font-family: Roboto;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+
+
+
+
+.button-edit {
+  position: absolute;
+  top: 10%;
+  left: 90%;
+  width: 55px;
+  height: 20px;
+  background: #ffffff;
+  border: 1px solid #659db8;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 11px;
+  color: #659db8;
+}
+
+.photo-profile {
+  margin-top: 50px;
+}
+
+/* .container-projects-profile{
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+    } */

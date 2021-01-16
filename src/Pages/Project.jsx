@@ -1,22 +1,19 @@
 import React, { useEffect, useState } from "react";
 import userdata from "../static/projet.json";
 import PrincipalButton from "../components/PrincipalButton";
-import PrincipalTitle from "../components/PrincipalTitle"
-import styled from 'styled-components';
+import PrincipalTitle from "../components/PrincipalTitle";
+import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import PhotoMaker from "../components/PhotoMaker";
+<<<<<<< HEAD
 import "../styles/projet.css"
+=======
+>>>>>>> 76162cc1512190830d35d939e8f06619df4af45e
 
+import "../styles/projet.css";
 
 function Project() {
 
-    const Img = styled.img`
-  width: 120%;
-  top: 50%;
-  left: 50%;
-
-  }
-`
     const { id } = useParams()
 
     const [projectData, setProject] = useState([])
@@ -29,7 +26,7 @@ function Project() {
         <div style={{ margin: "auto" }}>
             {projectData.map(item =>
                 item.id == id ?
-                    <div className="container">
+                    <div className="container-project">
                         <PrincipalTitle textTitle={item.name} />
                         <Img src={item.photo_link} />
                         <div className="name-project">

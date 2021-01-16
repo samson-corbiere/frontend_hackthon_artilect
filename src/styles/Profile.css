@@ -7,11 +7,14 @@ align-items: center;
 text-align: center;
 }
 
-.container {
+.container-profile {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 10% 0%;
+  margin-bottom: 40%;
+
 }
 
 .container-competence {

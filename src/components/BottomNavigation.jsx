@@ -10,7 +10,7 @@ import playImg from "../img/play.png";
 class BottomNavigation extends React.Component {
   render() {
     return (
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", zIndex:"20"}}>
         <div>
           <NavLink to={`/`}>
             <img src={machineImg} alt="" />
