@@ -9,6 +9,7 @@ import axios from "axios";
 import "../styles/MachinePage.css";
 import MachineElipse from "../img/machineelipse.png";
 import CardSquareUser from "../components/CardSquareUser";
+import CardSquare from "./CardSquare";
 
 function Machine() {
   const CardsContainer = styled.div`
@@ -39,19 +40,21 @@ function Machine() {
       .then(data => setPersonalityData(data));
   }, []);
 
+
   return (
     <div>
       <div className="container-machine">
+      {console.log(personalityData)}
+      {console.log(machineData)}
         <PrincipalTitle textTitle={machineData.name} />
         <div className="container-machine-profile"></div>
         <img src={machineData.url_photo} className="photo-machine" />
-        {/* <img src={MachineElipse} className="matiere" /> */}
         <h2>Description :</h2>
         <div className="container-description">
           <p className="description">{machineData.description}</p>
         </div>
         <PrincipalButton textButton="Comment m'utiliser" />
-        <a href={machineData.notice} target="_blank">
+        <a href={machineData.notice} target="_blank" className="télécharge">
           Télécharge mon manuel{" "}
         </a>
         <PrincipalButton textButton="Mes makers" />
@@ -74,12 +77,32 @@ function Machine() {
                 title={item.user_name}
                 bookmark={personalityData.map(item => item.url)}
               />
-              {/* </Link> */}
             </>
           ))}
         </CardsContainer>
-        <PrincipalButton textButton="Mes réalisations" />
-        <p>liste des projets</p>
+        <PrincipalButton style={{margin: "2em"}} textButton="Mes réalisations" />
+        <CardsContainer
+          style={{
+            width: "90%",
+            whiteSpace: "nowrap",
+            overflowX: "auto",
+            overflowY: "hidden",
+            display: "flex",
+            justifyContent: "space-between",
+            flexWrap: "nowrap",
+            flexDirection: "row"
+          }}
+        >
+          {personalityData.map(item => (
+            <>
+              <CardSquare style={{marginRight: "5%"}}
+                image_project={item.image}
+                title={item.project_name}
+                status={item.status}
+              />
+            </>
+           ))}
+        </CardsContainer>
       </div>
     </div>
   );

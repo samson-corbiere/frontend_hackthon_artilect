@@ -109,7 +109,7 @@ const cardSquareUser = ({ photo_maker, title, bookmark }) => {
           </WrapLevel>
         </WrapCompetence>
         <WrapMachine>
-          <Machine src="https://artilect.fr/wp-content/uploads/doliconnect/product/183/LASER-SP100-Plan%20de%20travail%2080-200x200.png" alt="Machine" />
+          <Machine src="https://artilect.fr/wp-content/uploads/doliconnect/product/8/LASER-SP500-Plan%20de%20travail%2079-200x200.png" alt="Machine" />
           <Machine src="https://artilect.fr/wp-content/uploads/doliconnect/product/183/LASER-SP100-Plan%20de%20travail%2080-200x200.png" alt="Machine" />
         </WrapMachine>
       </WrapItems>

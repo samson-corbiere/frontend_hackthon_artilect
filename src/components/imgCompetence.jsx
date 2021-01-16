@@ -36,9 +36,8 @@ const imgCompetence = () => {
   let imgComp1 = getRandomImg1(imgCompetence1)
   return (
     <div>
-    <Img src={imgComp} alt="compétence"/>
-    <Img src={imgComp1} alt="compétence"/>
-    {console.log(imgComp1)}
+      <Img src={imgComp} alt="compétence"/>
+      <Img src={imgComp1} alt="compétence"/>
     </div>
   )
 }

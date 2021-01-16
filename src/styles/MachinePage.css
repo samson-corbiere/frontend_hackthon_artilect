@@ -3,8 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10% 0%;
-  margin-bottom: 40%;
+  margin: 10% 0% 0 0;
 }
 
 .container-description {
@@ -32,6 +31,7 @@
   width: 150px;
   border: 2px solid white;
   box-sizing: border-box;
+  background: rgba(243, 221, 185);
   border-radius: 200px;
 }
 
@@ -43,18 +43,23 @@
   height: 200px;
 }
 
-/* .name {
-  font-family: Roboto;
-  font-weight: 300;
-  font-size: 20px;
-  line-height: 21px;
-  display: flex;
-  align-items: center;
-  text-align: center;
+.description {
+  text-align: justify;
+  padding: 2em;
 }
 
 
-
+.télécharge {
+  margin-right: 6%;
+  width: 70%;
+  padding: 2%;
+  background-color: rgba(243, 221, 185);
+  text-decoration: none;
+  color: #000000;
+  margin: 2em;
+  border-radius: 30px;
+  text-align: center;
+}
 
 
 
