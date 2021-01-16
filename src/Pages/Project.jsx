@@ -5,10 +5,6 @@ import PrincipalTitle from "../components/PrincipalTitle";
 import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import PhotoMaker from "../components/PhotoMaker";
-<<<<<<< HEAD
-import "../styles/projet.css"
-=======
->>>>>>> 76162cc1512190830d35d939e8f06619df4af45e
 
 import "../styles/projet.css";
 
@@ -28,7 +24,7 @@ function Project() {
                 item.id == id ?
                     <div className="container-project">
                         <PrincipalTitle textTitle={item.name} />
-                        <Img src={item.photo_link} />
+                        <img src={item.photo_link} />
                         <div className="name-project">
                             <PhotoMaker photo={item.user.map(e => e.photo)} />
                             <h2 className="name">{item.user.map(e => e.name)}</h2>

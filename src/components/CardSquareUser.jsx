@@ -61,7 +61,6 @@ const Machine = styled.img`
 `
 const ImgMark = styled.img`
   width: 30px;
-    height: 30px;
     z-index: 11;
     left: 58%;
     position: absolute;
@@ -84,19 +83,20 @@ const cardSquareUser = ({ photo_maker, title, bookmark }) => {
   return (
     <WrapCard>
       <WrapImg>
-        {bookmark == "wood" ?
+        {console.log(`bookmark, ${bookmark}`)}
+        {bookmark.includes("wood") ?
           (<ImgMark alt="markerBois" src={wood} />)
           :
-          bookmark == "caoutchouc" ?
-            (<ImgMark alt="markerBois" src={bonbon} />)
+          bookmark.includes("caoutchouc") ?
+            (<ImgMark alt="Caoutchouc" src={bonbon} />)
             :
-            bookmark == "brick" ?
-              (<ImgMark alt="markerBois" src={pierre} />)
+            bookmark.includes("brick") ?
+              (<ImgMark alt="Brick" src={pierre} />)
               :
-              bookmark == "cotton" ?
-                (<ImgMark alt="markerBois" src={coton} />)
+              bookmark.includes("cotton") ?
+                (<ImgMark alt="Cotton" src={coton} />)
                 :
-                <ImgMark alt="markerBois" src={metal} />
+                <ImgMark alt="Métal" src={metal} />
         }
 
         <Img src={photo_maker} alt="User" />

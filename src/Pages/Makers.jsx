@@ -15,26 +15,27 @@ const CardsContainer = styled.div`
 function ProjectsList() {
     const [userData, setUserData] = useState([])
     const [personalityData, setPersonalityData] = useState([])
-
+    
     const {id} = useParams()
-
-    console.log(personalityData)
-
-
+    
+    
+    
     useEffect(() => {
         axios.get(`http://localhost:5000/api/personalities/user/${id}`)
-            .then(res => res.data)
-            .then(data => setPersonalityData(data))
+        .then(res => res.data)
+        .then(data => setPersonalityData(data))
     }, [])
-
+    
     useEffect(() => {
         axios.get('http://localhost:5000/api/userProjects')
-            .then(res => res.data)
-            .then(data => setUserData(data))
+        .then(res => res.data)
+        .then(data => setUserData(data))
     }, [])
-
+    
     return (
         <div style={{ marginBottom: "40%" }}>
+            {console.log(userData)}
+            {console.log(personalityData)}
             <PrincipalTitle textTitle={"Les makers"} />
             <CardsContainer>
                 {userData.map(item =>
@@ -43,9 +44,9 @@ function ProjectsList() {
                             <CardSquareUser
                                 photo_maker={item.url_photo}
                                 title={item.user_name}
-                                bookmark={personalityData.map(item => item.name)} />
+                                bookmark={personalityData.map(perso => (perso.user_name == item.user_name) ? perso.name : "")}
+                                />
                         </Link>
-
                     </>
                 )}
             </CardsContainer>
